@@ -1,0 +1,15 @@
+'echo h
+echo hi
+echo h
+echo hi
+clear
+sleep 30 & sleep 45 &
+ping 13929 45
+echo hi
+clear
+sleep 20 & sleep 30 &
+ping 14217 13
+echo hi
+yo bro
+echo hi | wc
+echo hi
