@@ -4,9 +4,9 @@
 
 To build and run the shell:
 
-make clean
-make all
-./shell.out
+* make clean
+* make all
+* ./shell.out
 
 <br>
 
