@@ -39,11 +39,11 @@ void hop_directory(const char *inp)
     }
     else if (strcmp(inp, ".") == 0)
     {
-        // Do nothing for . as it is meant to not shift the directory
+        // Do nothing
     }
     else if (strcmp(inp, "..") == 0)
     {
-        if (chdir("..") == 0)// if changing to parent directory is possible
+        if (chdir("..") == 0)
         {
             if (getcwd(current_directory, sizeof(current_directory)) != NULL)
             {
@@ -102,18 +102,11 @@ void hop(char *input)
         return;
     }
 
-    if (strlen(input) <= 4)
+    // Check if length is exactly 3 (just "hop") or if there are no arguments after "hop "
+    if (strlen(input) == 3 || (strlen(input) == 4 && input[3] == '\n'))
     {
-        char cwd[1024];
-        if (getcwd(cwd, sizeof(cwd)) == NULL)
-        {
-            perror("getcwd");
-            return;
-        }
-        extern char home[1024];
-        strncpy(home, cwd, sizeof(home) - 1);
-        home[sizeof(home) - 1] = '\0';
-        strcpy(current_directory, cwd);
+        // Go to shell's home directory
+        hop_directory("~");
         return;
     }
 
@@ -125,16 +118,8 @@ void hop(char *input)
 
     if (!*ptr)
     {
-        char cwd[1024];
-        if (getcwd(cwd, sizeof(cwd)) == NULL)
-        {
-            perror("getcwd");
-            return;
-        }
-        extern char home[1024];
-        strncpy(home, cwd, sizeof(home) - 1);
-        home[sizeof(home) - 1] = '\0';
-        strcpy(current_directory, cwd);
+        // Go to shell's home directory  
+        hop_directory("~");
         return;
     }
 
@@ -149,4 +134,77 @@ void hop(char *input)
     {
         perror("getcwd");
     }
+}
+
+// Helper function to resolve directory path without changing directories
+// Returns 0 on success, -1 on failure
+int resolve_directory_path(const char *input_path, char *resolved_path, size_t path_size)
+{
+    char cwd[1024];
+    if (getcwd(cwd, sizeof(cwd)) == NULL)
+    {
+        return -1;
+    }
+
+    if (strcmp(input_path, "~") == 0)
+    {
+        const char *shell_home = get_home_dir();
+        if (shell_home == NULL || strlen(shell_home) == 0)
+        {
+            return -1;
+        }
+        strncpy(resolved_path, shell_home, path_size - 1);
+        resolved_path[path_size - 1] = '\0';
+    }
+    else if (strcmp(input_path, ".") == 0)
+    {
+        strncpy(resolved_path, cwd, path_size - 1);
+        resolved_path[path_size - 1] = '\0';
+    }
+    else if (strcmp(input_path, "..") == 0)
+    {
+        strncpy(resolved_path, cwd, path_size - 1);
+        resolved_path[path_size - 1] = '\0';
+        char *last_slash = strrchr(resolved_path, '/');
+        if (last_slash && last_slash != resolved_path)
+        {
+            *last_slash = '\0';
+        }
+        else
+        {
+            strcpy(resolved_path, "/");
+        }
+    }
+    else if (strcmp(input_path, "-") == 0)
+    {
+        if (strlen(prev_directory) == 0)
+        {
+            return -1;  // No previous directory
+        }
+        strncpy(resolved_path, prev_directory, path_size - 1);
+        resolved_path[path_size - 1] = '\0';
+    }
+    else
+    {
+        // Regular path - could be relative or absolute
+        if (input_path[0] == '/')
+        {
+            // Absolute path
+            strncpy(resolved_path, input_path, path_size - 1);
+            resolved_path[path_size - 1] = '\0';
+        }
+        else
+        {
+            // Relative path
+            strncpy(resolved_path, cwd, path_size - 1);
+            resolved_path[path_size - 1] = '\0';
+            if (resolved_path[strlen(resolved_path) - 1] != '/')
+            {
+                strncat(resolved_path, "/", path_size - strlen(resolved_path) - 1);
+            }
+            strncat(resolved_path, input_path, path_size - strlen(resolved_path) - 1);
+        }
+    }
+
+    return 0;
 }

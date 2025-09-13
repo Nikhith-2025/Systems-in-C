@@ -10,29 +10,24 @@
 #include "../include/input.h"
 #include <ctype.h>
 
-static void reveal_with_args(char *ptr);// static allows it to not change
+// Static function declaration
+static void reveal_with_args(char *ptr);
 void reveal(char *input)
 {
     char *ptr;
     
     // Handle the case where input might contain pipes or other operators
-    // In this case,only process up to the first operator
+    // In this case, we should only process up to the first operator
     if (input) {
-        char *pipe_pos = strchr(input, '|'); // gives the position of pipes
+        char *pipe_pos = strchr(input, '|');
         char *amp_pos = strchr(input, '&');
         char *semi_pos = strchr(input, ';');
         
         // Find the earliest operator position
-        char *earliest_op = input + strlen(input);
-        if (pipe_pos && pipe_pos < earliest_op) {
-            earliest_op = pipe_pos;
-        }
-        if (amp_pos && amp_pos < earliest_op) {
-            earliest_op = amp_pos;
-        }
-        if (semi_pos && semi_pos < earliest_op) {
-            earliest_op = semi_pos;
-        }
+        char *earliest_op = input + strlen(input); // Default to end
+        if (pipe_pos && pipe_pos < earliest_op) earliest_op = pipe_pos;
+        if (amp_pos && amp_pos < earliest_op) earliest_op = amp_pos;
+        if (semi_pos && semi_pos < earliest_op) earliest_op = semi_pos;
         
         // Create a clean input that stops at the first operator
         if (earliest_op < input + strlen(input)) {
@@ -42,11 +37,11 @@ void reveal(char *input)
             clean_input[clean_len] = '\0';
             
             // Trim trailing spaces
-            while (clean_len > 0 && isspace(clean_input[clean_len - 1])) 
-            {
+            while (clean_len > 0 && isspace(clean_input[clean_len - 1])) {
                 clean_input[--clean_len] = '\0';
             }
             
+            // Now process the clean input
             if (strlen(clean_input) > 6 && clean_input[6] == ' ') {
                 ptr = clean_input + 7;
             } else if (strlen(clean_input) >= 6) {
@@ -55,23 +50,25 @@ void reveal(char *input)
                 ptr = clean_input;
             }
             
+            // We need to copy ptr content before freeing clean_input
             char temp_args[MAX_DIR_LENGTH];
             strncpy(temp_args, ptr, MAX_DIR_LENGTH - 1);
             temp_args[MAX_DIR_LENGTH - 1] = '\0';
             free(clean_input);
             
+            // Use temp_args instead of ptr for the rest of the function
             reveal_with_args(temp_args);
             return;
         }
     }
     
-    // this is for reveal without any operators
+    // Normal case without operators
     if (input && strlen(input) > 6 && input[6] == ' ') {
         ptr = input + 7;  // Skip "reveal "
     } else if (input && strlen(input) >= 6) {
-        ptr = input + 6;  
+        ptr = input + 6;  // Just "reveal", no space or at end
     } else {
-        ptr = input ? input : ""; 
+        ptr = input ? input : "";  // Fallback
     }
     
     reveal_with_args(ptr);
@@ -79,50 +76,54 @@ void reveal(char *input)
 
 static void reveal_with_args(char *ptr)
 {
-    int show_hidden = 0;        // Flag for -a (hidden files)
-    int line_format = 0;        // Flag for -l (l format)
-    char target_dir[MAX_DIR_LENGTH] = ""; // Directory to show
-    char cwd[MAX_DIR_LENGTH] = "";        // Current working directory to keep track
+    int show_hidden = 0;        // Flag for -a (show hidden files)
+    int line_format = 0;        // Flag for -l (line-by-line format)
+    char target_dir[MAX_DIR_LENGTH] = ""; // Directory to reveal
+    char cwd[MAX_DIR_LENGTH] = "";        // Current working directory for reference
 
+    // Get current working directory
     if (getcwd(cwd, sizeof(cwd)) == NULL)
     {
         printf("No such directory!\n");
         return;
     }
 
+    // Synchronize current_directory with actual CWD if needed
     if (strlen(current_directory) == 0 || strcmp(cwd, current_directory) != 0)
     {
         strncpy(current_directory, cwd, MAX_DIR_LENGTH - 1);
-        current_directory[MAX_DIR_LENGTH - 1] = '\0'; 
+        current_directory[MAX_DIR_LENGTH - 1] = '\0'; // Ensure null-termination
     }
 
-    // this function is used to skip spaces
+    // Skip spaces
     while (*ptr && isspace((unsigned char)*ptr))
     {
         ptr++;
     }
 
-    // if no argument is given then cwd
+    // No args → use cwd
     if (!*ptr)
     {
-        strncpy(target_dir, cwd, MAX_DIR_LENGTH - 1);
+        strncpy(target_dir, current_directory, MAX_DIR_LENGTH - 1);
         target_dir[MAX_DIR_LENGTH - 1] = '\0';
     }
     else
     {
+        // Parse flags and arguments
         char *arg_start = NULL;
         
         while (*ptr == '-')
         {
-            ptr++; 
+            ptr++; // Skip the '-'
             
-            // Check if only just "-" (previous directory )
+            // Check if this is just "-" (previous directory argument)
             if (*ptr == ' ' || *ptr == '\0')
             {
-                arg_start = ptr - 1; 
+                arg_start = ptr - 1; // Point to the '-'
                 break;
             }
             
+            // Parse flag characters
             while (*ptr && *ptr != ' ' && *ptr != '-')
             {
                 if (*ptr == 'a')
@@ -141,37 +142,42 @@ static void reveal_with_args(char *ptr)
                 ptr++;
             }
             
+            // Skip spaces after flags
             while (*ptr && isspace((unsigned char)*ptr))
             {
                 ptr++;
             }
         }
 
-        // If "-" not found argument
+        // If we didn't find a "-" argument, check for regular argument
         if (arg_start == NULL && *ptr)
         {
             arg_start = ptr;
         }
 
+        // Process the argument if found
         if (arg_start != NULL)
         {
+            // Find the end of the argument
             char *arg_end = arg_start;
             while (*arg_end && !isspace((unsigned char)*arg_end))
             {
                 arg_end++;
             }
             
+            // Check if there are more arguments after this one
             char *temp_ptr = arg_end;
             while (*temp_ptr && isspace((unsigned char)*temp_ptr))
             {
                 temp_ptr++;
             }
-            if (*temp_ptr) 
+            if (*temp_ptr) // More arguments found
             {
                 printf("reveal: Invalid Syntax!\n");
                 return;
             }
             
+            // Extract the argument
             int arg_len = arg_end - arg_start;
             char arg[MAX_DIR_LENGTH] = {0};
             if (arg_len >= MAX_DIR_LENGTH)
@@ -181,73 +187,22 @@ static void reveal_with_args(char *ptr)
             }
             strncpy(arg, arg_start, arg_len);
             
-            if (strcmp(arg, "~") == 0)
+            // Use hop's directory resolution function
+            if (resolve_directory_path(arg, target_dir, MAX_DIR_LENGTH) != 0)
             {
-                const char *shell_home = get_home_dir();
-                if (shell_home) {
-                    strncpy(target_dir, shell_home, MAX_DIR_LENGTH - 1);
-                    target_dir[MAX_DIR_LENGTH - 1] = '\0';
-                } else {
-                    strncpy(target_dir, cwd, MAX_DIR_LENGTH - 1);
-                    target_dir[MAX_DIR_LENGTH - 1] = '\0';
-                }
-            }
-            else if (strcmp(arg, ".") == 0)
-            {
-                strncpy(target_dir, cwd, MAX_DIR_LENGTH - 1);
-                target_dir[MAX_DIR_LENGTH - 1] = '\0';
-            }
-            else if (strcmp(arg, "..") == 0)
-            {
-                strncpy(target_dir, cwd, MAX_DIR_LENGTH - 1);
-                target_dir[MAX_DIR_LENGTH - 1] = '\0';
-                char *slash = strrchr(target_dir, '/');
-                if (slash && slash != target_dir)
-                {
-                    *slash = '\0';
-                }
-                else
-                {
-                    strcpy(target_dir, "/");
-                }
-            }
-            else if (strcmp(arg, "-") == 0)
-            {
-                if (strlen(prev_directory) == 0)
-                {
-                    printf("No such directory!\n");
-                    return;
-                }
-                strncpy(target_dir, prev_directory, MAX_DIR_LENGTH - 1);
-                target_dir[MAX_DIR_LENGTH - 1] = '\0';
-            }
-            else
-            {
-                if (arg[0] == '/')
-                {
-                    strncpy(target_dir, arg, MAX_DIR_LENGTH - 1);
-                    target_dir[MAX_DIR_LENGTH - 1] = '\0';
-                }
-                else
-                {
-                    strncpy(target_dir, cwd, MAX_DIR_LENGTH - 1);
-                    target_dir[MAX_DIR_LENGTH - 1] = '\0';
-                    if (target_dir[strlen(target_dir) - 1] != '/')
-                    {
-                        strncat(target_dir, "/", MAX_DIR_LENGTH - strlen(target_dir) - 1);
-                    }
-                    strncat(target_dir, arg, MAX_DIR_LENGTH - strlen(target_dir) - 1);
-                }
+                printf("No such directory!\n");
+                return;
             }
         }
         else
         {
+            // No directory argument, use current directory
             strncpy(target_dir, cwd, MAX_DIR_LENGTH - 1);
             target_dir[MAX_DIR_LENGTH - 1] = '\0';
         }
     }
 
-
+    // Check if directory exists
     DIR *dir = opendir(target_dir);
     if (dir == NULL)
     {
@@ -255,6 +210,9 @@ static void reveal_with_args(char *ptr)
         return;
     }
 
+    // Note: We don't update current_directory/prev_directory since hop manages them
+
+    // Collect names
     char **entries = NULL;
     int entry_count = 0;
     struct dirent *entry;
@@ -270,8 +228,7 @@ static void reveal_with_args(char *ptr)
     }
     closedir(dir);
 
-
-    // sort them
+    // Sort ASCII lexicographic order
     for (int i = 0; i < entry_count - 1; i++)
     {
         for (int j = i + 1; j < entry_count; j++)
@@ -285,6 +242,7 @@ static void reveal_with_args(char *ptr)
         }
     }
 
+    // Print
     if (entry_count > 0)
     {
         if (line_format)
@@ -308,6 +266,7 @@ static void reveal_with_args(char *ptr)
         }
     }
 
+    // Cleanup
     for (int i = 0; i < entry_count; i++)
     {
         free(entries[i]);

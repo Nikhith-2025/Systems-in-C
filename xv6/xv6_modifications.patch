@@ -1,88 +1,50 @@
-Binary files xv6-riscv/fs.img and xv6-riscv_modified/fs.img differ
-diff -ruN xv6-riscv/.git/AUTO_MERGE xv6-riscv_modified/.git/AUTO_MERGE
---- xv6-riscv/.git/AUTO_MERGE	1970-01-01 05:30:00.000000000 +0530
-+++ xv6-riscv_modified/.git/AUTO_MERGE	2025-09-12 21:15:17.000000000 +0530
-@@ -0,0 +1 @@
-+f4568c6eb9763ae432ce566905f3ece478617b5c
-Binary files xv6-riscv/.git/index and xv6-riscv_modified/.git/index differ
-diff -ruN xv6-riscv/.git/logs/HEAD xv6-riscv_modified/.git/logs/HEAD
+Binary files xv6-riscv/fs.img and xv6-riscv_Modified/fs.img differ
+Binary files xv6-riscv/.git/index and xv6-riscv_Modified/.git/index differ
+diff -ruN xv6-riscv/.git/logs/HEAD xv6-riscv_Modified/.git/logs/HEAD
 --- xv6-riscv/.git/logs/HEAD	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/.git/logs/HEAD	2025-09-12 21:15:17.000000000 +0530
-@@ -1 +1,2 @@
++++ xv6-riscv_Modified/.git/logs/HEAD	2025-09-13 13:52:41.573750640 +0530
+@@ -1 +1 @@
 -0000000000000000000000000000000000000000 996f6ee34877db51c697479d97abdf127e09f5b4 Nikhith-2025 <nikhith2024@gmail.com> 1757467231 +0530	clone: from https://github.com/mit-pdos/xv6-riscv.git
-+0000000000000000000000000000000000000000 996f6ee34877db51c697479d97abdf127e09f5b4 Nikhith-2025 <nikhith2024@gmail.com> 1757463594 +0530	clone: from https://github.com/mit-pdos/xv6-riscv.git
-+996f6ee34877db51c697479d97abdf127e09f5b4 996f6ee34877db51c697479d97abdf127e09f5b4 krithikkambhampati <krithik3001@gmail.com> 1757655052 +0530	reset: moving to HEAD
-diff -ruN xv6-riscv/.git/logs/refs/heads/riscv xv6-riscv_modified/.git/logs/refs/heads/riscv
++0000000000000000000000000000000000000000 996f6ee34877db51c697479d97abdf127e09f5b4 Nikhith-2025 <nikhith2024@gmail.com> 1757751761 +0530	clone: from https://github.com/mit-pdos/xv6-riscv.git
+diff -ruN xv6-riscv/.git/logs/refs/heads/riscv xv6-riscv_Modified/.git/logs/refs/heads/riscv
 --- xv6-riscv/.git/logs/refs/heads/riscv	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/.git/logs/refs/heads/riscv	2025-09-12 21:15:17.000000000 +0530
++++ xv6-riscv_Modified/.git/logs/refs/heads/riscv	2025-09-13 13:52:41.573750640 +0530
 @@ -1 +1 @@
 -0000000000000000000000000000000000000000 996f6ee34877db51c697479d97abdf127e09f5b4 Nikhith-2025 <nikhith2024@gmail.com> 1757467231 +0530	clone: from https://github.com/mit-pdos/xv6-riscv.git
-+0000000000000000000000000000000000000000 996f6ee34877db51c697479d97abdf127e09f5b4 Nikhith-2025 <nikhith2024@gmail.com> 1757463594 +0530	clone: from https://github.com/mit-pdos/xv6-riscv.git
-diff -ruN xv6-riscv/.git/logs/refs/remotes/origin/HEAD xv6-riscv_modified/.git/logs/refs/remotes/origin/HEAD
++0000000000000000000000000000000000000000 996f6ee34877db51c697479d97abdf127e09f5b4 Nikhith-2025 <nikhith2024@gmail.com> 1757751761 +0530	clone: from https://github.com/mit-pdos/xv6-riscv.git
+diff -ruN xv6-riscv/.git/logs/refs/remotes/origin/HEAD xv6-riscv_Modified/.git/logs/refs/remotes/origin/HEAD
 --- xv6-riscv/.git/logs/refs/remotes/origin/HEAD	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/.git/logs/refs/remotes/origin/HEAD	2025-09-12 21:15:17.000000000 +0530
++++ xv6-riscv_Modified/.git/logs/refs/remotes/origin/HEAD	2025-09-13 13:52:41.573182416 +0530
 @@ -1 +1 @@
 -0000000000000000000000000000000000000000 996f6ee34877db51c697479d97abdf127e09f5b4 Nikhith-2025 <nikhith2024@gmail.com> 1757467231 +0530	clone: from https://github.com/mit-pdos/xv6-riscv.git
-+0000000000000000000000000000000000000000 996f6ee34877db51c697479d97abdf127e09f5b4 Nikhith-2025 <nikhith2024@gmail.com> 1757463594 +0530	clone: from https://github.com/mit-pdos/xv6-riscv.git
-diff -ruN xv6-riscv/.git/objects/05/223bf60b160574531eedac3030bd800b93b442 xv6-riscv_modified/.git/objects/05/223bf60b160574531eedac3030bd800b93b442
---- xv6-riscv/.git/objects/05/223bf60b160574531eedac3030bd800b93b442	1970-01-01 05:30:00.000000000 +0530
-+++ xv6-riscv_modified/.git/objects/05/223bf60b160574531eedac3030bd800b93b442	2025-09-12 21:15:17.000000000 +0530
-@@ -0,0 +1,2 @@
-+xmQÀnÉ0Ï5|≈ñ‰êJ)ú™®çzÓ‰T)Rd`	∆∏~(AQ˛Ω∆@∫¥ımvfgv◊ôh3ÿææ<,Sgtöqô*‘ûœQ¥Ñî®ôEp¶3…~∂B0÷e VÉ/ÊLìDë“\Zàóp[
-+»∫°My7(Zê≠,∏=»x˜”¿e.\Åpàk‘E:ö&’!î∆eÄ“ÍÆ¯◊t∞RK~ÅwàΩ¸Ë˝&B≤}ŸTº¥Cïó∞^Ö2~yy¶Î¯…;-∆âìì?ìePÜ‹I0f‚-0}÷P¸œßèöÙ“f”Ap`€Ï?˜«’µﬁÓì˚ˇ©jyãQ∏Œ:ˆ_‚w€M/‹xf3®∏B¬jdÅgÕ-•s—äk.ë„s[Öí¿¶ñ-5wRpI'-çet‘_tS\øºö„¬)¬û–*N„Ü/øüE17[≈)À∫õ7ËØë∑NÜ°æc’˙ü
-\ No newline at end of file
-Binary files xv6-riscv/.git/objects/1b/c17ab8036fc1932a00649d9ecca417e2d84517 and xv6-riscv_modified/.git/objects/1b/c17ab8036fc1932a00649d9ecca417e2d84517 differ
-Binary files xv6-riscv/.git/objects/38/543f43e04d0cb40e0364e65324cb75f9746f29 and xv6-riscv_modified/.git/objects/38/543f43e04d0cb40e0364e65324cb75f9746f29 differ
-Binary files xv6-riscv/.git/objects/50/99a1cb490f365a789d352c59fbae458fea43a7 and xv6-riscv_modified/.git/objects/50/99a1cb490f365a789d352c59fbae458fea43a7 differ
-Binary files xv6-riscv/.git/objects/52/58228e74416a403c318ed71aeccdbdd17e0dde and xv6-riscv_modified/.git/objects/52/58228e74416a403c318ed71aeccdbdd17e0dde differ
-Binary files xv6-riscv/.git/objects/7e/45e55e2238670deb5b6e7245cff9c636c7e9ed and xv6-riscv_modified/.git/objects/7e/45e55e2238670deb5b6e7245cff9c636c7e9ed differ
-Binary files xv6-riscv/.git/objects/87/f8a0299a6d9f7de06846aee37888d3690b4eb8 and xv6-riscv_modified/.git/objects/87/f8a0299a6d9f7de06846aee37888d3690b4eb8 differ
-Binary files xv6-riscv/.git/objects/8f/bab731ec8606988303ee8e3c6931ea145479db and xv6-riscv_modified/.git/objects/8f/bab731ec8606988303ee8e3c6931ea145479db differ
-Binary files xv6-riscv/.git/objects/8f/cc647a680fd204c4ed64691a13c366b83da770 and xv6-riscv_modified/.git/objects/8f/cc647a680fd204c4ed64691a13c366b83da770 differ
-Binary files xv6-riscv/.git/objects/93/fde0a7c5a5827ccd087b4144e512034164d76d and xv6-riscv_modified/.git/objects/93/fde0a7c5a5827ccd087b4144e512034164d76d differ
-Binary files xv6-riscv/.git/objects/a9/ee981479072e858c789af55b21efdaac0ddc6e and xv6-riscv_modified/.git/objects/a9/ee981479072e858c789af55b21efdaac0ddc6e differ
-Binary files xv6-riscv/.git/objects/aa/e71f5e449395e2f5ce7770953a3788264ff17a and xv6-riscv_modified/.git/objects/aa/e71f5e449395e2f5ce7770953a3788264ff17a differ
-Binary files xv6-riscv/.git/objects/b4/c85dc7c81f4f84e74001a1e47fe8cc10652deb and xv6-riscv_modified/.git/objects/b4/c85dc7c81f4f84e74001a1e47fe8cc10652deb differ
-Binary files xv6-riscv/.git/objects/b6/94c919ee3e88b23b1df6509387ad087a12702b and xv6-riscv_modified/.git/objects/b6/94c919ee3e88b23b1df6509387ad087a12702b differ
-Binary files xv6-riscv/.git/objects/f4/568c6eb9763ae432ce566905f3ece478617b5c and xv6-riscv_modified/.git/objects/f4/568c6eb9763ae432ce566905f3ece478617b5c differ
-diff -ruN xv6-riscv/.git/objects/fc/72ef38d7eea2d2cc76c46eff53375806a24b23 xv6-riscv_modified/.git/objects/fc/72ef38d7eea2d2cc76c46eff53375806a24b23
---- xv6-riscv/.git/objects/fc/72ef38d7eea2d2cc76c46eff53375806a24b23	1970-01-01 05:30:00.000000000 +0530
-+++ xv6-riscv_modified/.git/objects/fc/72ef38d7eea2d2cc76c46eff53375806a24b23	2025-09-12 21:15:17.000000000 +0530
-@@ -0,0 +1 @@
-+x•èANƒ0EYÁ^ÇêêõƒÒ!ƒUúƒùF%Ì(héOpñÔ-û˛œ{kuÄe˜0∫*0jÇ9yı≈ì’¿ñ¢ìr`—Ñ%x:…‹§Î6 ∆0UÁ/Ã%—îCdœ±DñTÊ…≤bú)y#_cŸ;¨Ωé•Æ´¥¥Hª…®ˆÎ‚ÙqmR?_Úﬁﬁab‚@Ñd·…°9ÌπuËˇ*¶nEÔ∞o–Îëø_ˇ.¿\ÔpÈ„Ò	§_Û‡·W7
-\ No newline at end of file
-Binary files xv6-riscv/.git/objects/pack/pack-8cd0f6439c89ba94dea63133ec4f8834fc33b2fe.idx and xv6-riscv_modified/.git/objects/pack/pack-8cd0f6439c89ba94dea63133ec4f8834fc33b2fe.idx differ
-Binary files xv6-riscv/.git/objects/pack/pack-8cd0f6439c89ba94dea63133ec4f8834fc33b2fe.pack and xv6-riscv_modified/.git/objects/pack/pack-8cd0f6439c89ba94dea63133ec4f8834fc33b2fe.pack differ
-Binary files xv6-riscv/.git/objects/pack/pack-8cd0f6439c89ba94dea63133ec4f8834fc33b2fe.rev and xv6-riscv_modified/.git/objects/pack/pack-8cd0f6439c89ba94dea63133ec4f8834fc33b2fe.rev differ
-Binary files xv6-riscv/.git/objects/pack/pack-b6de136075a1c9c8dc06ea03fbbbe973688dd232.idx and xv6-riscv_modified/.git/objects/pack/pack-b6de136075a1c9c8dc06ea03fbbbe973688dd232.idx differ
-Binary files xv6-riscv/.git/objects/pack/pack-b6de136075a1c9c8dc06ea03fbbbe973688dd232.pack and xv6-riscv_modified/.git/objects/pack/pack-b6de136075a1c9c8dc06ea03fbbbe973688dd232.pack differ
-Binary files xv6-riscv/.git/objects/pack/pack-b6de136075a1c9c8dc06ea03fbbbe973688dd232.rev and xv6-riscv_modified/.git/objects/pack/pack-b6de136075a1c9c8dc06ea03fbbbe973688dd232.rev differ
-diff -ruN xv6-riscv/.git/ORIG_HEAD xv6-riscv_modified/.git/ORIG_HEAD
---- xv6-riscv/.git/ORIG_HEAD	1970-01-01 05:30:00.000000000 +0530
-+++ xv6-riscv_modified/.git/ORIG_HEAD	2025-09-12 21:15:17.000000000 +0530
-@@ -0,0 +1 @@
-+996f6ee34877db51c697479d97abdf127e09f5b4
-diff -ruN xv6-riscv/kernel/bio.d xv6-riscv_modified/kernel/bio.d
++0000000000000000000000000000000000000000 996f6ee34877db51c697479d97abdf127e09f5b4 Nikhith-2025 <nikhith2024@gmail.com> 1757751761 +0530	clone: from https://github.com/mit-pdos/xv6-riscv.git
+Binary files xv6-riscv/.git/objects/pack/pack-66669d2ef1caf96894aac95717481e0b77129b66.idx and xv6-riscv_Modified/.git/objects/pack/pack-66669d2ef1caf96894aac95717481e0b77129b66.idx differ
+Binary files xv6-riscv/.git/objects/pack/pack-66669d2ef1caf96894aac95717481e0b77129b66.pack and xv6-riscv_Modified/.git/objects/pack/pack-66669d2ef1caf96894aac95717481e0b77129b66.pack differ
+Binary files xv6-riscv/.git/objects/pack/pack-66669d2ef1caf96894aac95717481e0b77129b66.rev and xv6-riscv_Modified/.git/objects/pack/pack-66669d2ef1caf96894aac95717481e0b77129b66.rev differ
+Binary files xv6-riscv/.git/objects/pack/pack-8cd0f6439c89ba94dea63133ec4f8834fc33b2fe.idx and xv6-riscv_Modified/.git/objects/pack/pack-8cd0f6439c89ba94dea63133ec4f8834fc33b2fe.idx differ
+Binary files xv6-riscv/.git/objects/pack/pack-8cd0f6439c89ba94dea63133ec4f8834fc33b2fe.pack and xv6-riscv_Modified/.git/objects/pack/pack-8cd0f6439c89ba94dea63133ec4f8834fc33b2fe.pack differ
+Binary files xv6-riscv/.git/objects/pack/pack-8cd0f6439c89ba94dea63133ec4f8834fc33b2fe.rev and xv6-riscv_Modified/.git/objects/pack/pack-8cd0f6439c89ba94dea63133ec4f8834fc33b2fe.rev differ
+diff -ruN xv6-riscv/kernel/bio.d xv6-riscv_Modified/kernel/bio.d
 --- xv6-riscv/kernel/bio.d	2025-09-12 05:01:34.000000000 +0530
-+++ xv6-riscv_modified/kernel/bio.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/bio.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/bio.o: kernel/bio.c kernel/types.h kernel/param.h \
 - kernel/spinlock.h kernel/sleeplock.h kernel/riscv.h kernel/defs.h \
 - kernel/fs.h kernel/buf.h
-Binary files xv6-riscv/kernel/bio.o and xv6-riscv_modified/kernel/bio.o differ
-diff -ruN xv6-riscv/kernel/console.d xv6-riscv_modified/kernel/console.d
+Binary files xv6-riscv/kernel/bio.o and xv6-riscv_Modified/kernel/bio.o differ
+diff -ruN xv6-riscv/kernel/console.d xv6-riscv_Modified/kernel/console.d
 --- xv6-riscv/kernel/console.d	2025-09-12 05:01:33.000000000 +0530
-+++ xv6-riscv_modified/kernel/console.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/console.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,5 +0,0 @@
 -kernel/console.o: kernel/console.c \
 - /usr/lib/gcc-cross/riscv64-linux-gnu/13/include/stdarg.h kernel/types.h \
 - kernel/param.h kernel/spinlock.h kernel/sleeplock.h kernel/fs.h \
 - kernel/file.h kernel/memlayout.h kernel/riscv.h kernel/defs.h \
 - kernel/proc.h
-Binary files xv6-riscv/kernel/console.o and xv6-riscv_modified/kernel/console.o differ
-diff -ruN xv6-riscv/kernel/defs.h xv6-riscv_modified/kernel/defs.h
+Binary files xv6-riscv/kernel/console.o and xv6-riscv_Modified/kernel/console.o differ
+diff -ruN xv6-riscv/kernel/defs.h xv6-riscv_Modified/kernel/defs.h
 --- xv6-riscv/kernel/defs.h	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/kernel/defs.h	2025-09-12 21:29:21.000000000 +0530
++++ xv6-riscv_Modified/kernel/defs.h	2025-09-13 13:54:11.493861463 +0530
 @@ -98,6 +98,7 @@
  int             kwait(uint64);
  void            wakeup(void*);
@@ -91,42 +53,49 @@ diff -ruN xv6-riscv/kernel/defs.h xv6-riscv_modified/kernel/defs.h
  int             either_copyout(int user_dst, uint64 dst, void *src, uint64 len);
  int             either_copyin(void *dst, int user_src, uint64 src, uint64 len);
  void            procdump(void);
-Binary files xv6-riscv/kernel/entry.o and xv6-riscv_modified/kernel/entry.o differ
-diff -ruN xv6-riscv/kernel/exec.d xv6-riscv_modified/kernel/exec.d
+@@ -182,4 +183,4 @@
+ void            virtio_disk_intr(void);
+ 
+ // number of elements in fixed-size array
+-#define NELEM(x) (sizeof(x)/sizeof((x)[0]))
++#define NELEM(x) (sizeof(x)/sizeof((x)[0]))
+\ No newline at end of file
+Binary files xv6-riscv/kernel/entry.o and xv6-riscv_Modified/kernel/entry.o differ
+diff -ruN xv6-riscv/kernel/exec.d xv6-riscv_Modified/kernel/exec.d
 --- xv6-riscv/kernel/exec.d	2025-09-12 05:01:35.000000000 +0530
-+++ xv6-riscv_modified/kernel/exec.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/exec.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/exec.o: kernel/exec.c kernel/types.h kernel/param.h \
 - kernel/memlayout.h kernel/riscv.h kernel/spinlock.h kernel/proc.h \
 - kernel/defs.h kernel/elf.h
-Binary files xv6-riscv/kernel/exec.o and xv6-riscv_modified/kernel/exec.o differ
-diff -ruN xv6-riscv/kernel/file.d xv6-riscv_modified/kernel/file.d
+Binary files xv6-riscv/kernel/exec.o and xv6-riscv_Modified/kernel/exec.o differ
+diff -ruN xv6-riscv/kernel/file.d xv6-riscv_Modified/kernel/file.d
 --- xv6-riscv/kernel/file.d	2025-09-12 05:01:35.000000000 +0530
-+++ xv6-riscv_modified/kernel/file.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/file.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/file.o: kernel/file.c kernel/types.h kernel/riscv.h kernel/defs.h \
 - kernel/param.h kernel/fs.h kernel/spinlock.h kernel/sleeplock.h \
 - kernel/file.h kernel/stat.h kernel/proc.h
-Binary files xv6-riscv/kernel/file.o and xv6-riscv_modified/kernel/file.o differ
-diff -ruN xv6-riscv/kernel/fs.d xv6-riscv_modified/kernel/fs.d
+Binary files xv6-riscv/kernel/file.o and xv6-riscv_Modified/kernel/file.o differ
+diff -ruN xv6-riscv/kernel/fs.d xv6-riscv_Modified/kernel/fs.d
 --- xv6-riscv/kernel/fs.d	2025-09-12 05:01:34.000000000 +0530
-+++ xv6-riscv_modified/kernel/fs.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/fs.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/fs.o: kernel/fs.c kernel/types.h kernel/riscv.h kernel/defs.h \
 - kernel/param.h kernel/stat.h kernel/spinlock.h kernel/proc.h \
 - kernel/sleeplock.h kernel/fs.h kernel/buf.h kernel/file.h
-Binary files xv6-riscv/kernel/fs.o and xv6-riscv_modified/kernel/fs.o differ
-diff -ruN xv6-riscv/kernel/kalloc.d xv6-riscv_modified/kernel/kalloc.d
+Binary files xv6-riscv/kernel/fs.o and xv6-riscv_Modified/kernel/fs.o differ
+diff -ruN xv6-riscv/kernel/kalloc.d xv6-riscv_Modified/kernel/kalloc.d
 --- xv6-riscv/kernel/kalloc.d	2025-09-12 05:01:34.000000000 +0530
-+++ xv6-riscv_modified/kernel/kalloc.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/kalloc.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -kernel/kalloc.o: kernel/kalloc.c kernel/types.h kernel/param.h \
 - kernel/memlayout.h kernel/spinlock.h kernel/riscv.h kernel/defs.h
-Binary files xv6-riscv/kernel/kalloc.o and xv6-riscv_modified/kernel/kalloc.o differ
-Binary files xv6-riscv/kernel/kernel and xv6-riscv_modified/kernel/kernel differ
-diff -ruN xv6-riscv/kernel/kernel.asm xv6-riscv_modified/kernel/kernel.asm
+Binary files xv6-riscv/kernel/kalloc.o and xv6-riscv_Modified/kernel/kalloc.o differ
+Binary files xv6-riscv/kernel/kernel and xv6-riscv_Modified/kernel/kernel differ
+diff -ruN xv6-riscv/kernel/kernel.asm xv6-riscv_Modified/kernel/kernel.asm
 --- xv6-riscv/kernel/kernel.asm	2025-09-12 05:01:35.000000000 +0530
-+++ xv6-riscv_modified/kernel/kernel.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/kernel.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,12843 +0,0 @@
 -
 -kernel/kernel:     file format elf64-littleriscv
@@ -12971,9 +12940,9 @@ diff -ruN xv6-riscv/kernel/kernel.asm xv6-riscv_modified/kernel/kernel.asm
 -    8000611a:	7928                	ld	a0,112(a0)
 -    8000611c:	10200073          	sret
 -	...
-diff -ruN xv6-riscv/kernel/kernel.sym xv6-riscv_modified/kernel/kernel.sym
+diff -ruN xv6-riscv/kernel/kernel.sym xv6-riscv_Modified/kernel/kernel.sym
 --- xv6-riscv/kernel/kernel.sym	2025-09-12 05:01:35.000000000 +0530
-+++ xv6-riscv_modified/kernel/kernel.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/kernel.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,266 +0,0 @@
 -0000000080000000 .text
 -0000000080007000 .rodata
@@ -13241,182 +13210,600 @@ diff -ruN xv6-riscv/kernel/kernel.sym xv6-riscv_modified/kernel/kernel.sym
 -000000008000506e sys_mknod
 -0000000080004078 filestat
 -0000000080012298 pid_lock
-Binary files xv6-riscv/kernel/kernelvec.o and xv6-riscv_modified/kernel/kernelvec.o differ
-diff -ruN xv6-riscv/kernel/log.d xv6-riscv_modified/kernel/log.d
+Binary files xv6-riscv/kernel/kernelvec.o and xv6-riscv_Modified/kernel/kernelvec.o differ
+diff -ruN xv6-riscv/kernel/log.d xv6-riscv_Modified/kernel/log.d
 --- xv6-riscv/kernel/log.d	2025-09-12 05:01:35.000000000 +0530
-+++ xv6-riscv_modified/kernel/log.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/log.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/log.o: kernel/log.c kernel/types.h kernel/riscv.h kernel/defs.h \
 - kernel/param.h kernel/spinlock.h kernel/sleeplock.h kernel/fs.h \
 - kernel/buf.h
-Binary files xv6-riscv/kernel/log.o and xv6-riscv_modified/kernel/log.o differ
-diff -ruN xv6-riscv/kernel/main.d xv6-riscv_modified/kernel/main.d
+Binary files xv6-riscv/kernel/log.o and xv6-riscv_Modified/kernel/log.o differ
+diff -ruN xv6-riscv/kernel/main.d xv6-riscv_Modified/kernel/main.d
 --- xv6-riscv/kernel/main.d	2025-09-12 05:01:34.000000000 +0530
-+++ xv6-riscv_modified/kernel/main.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/main.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -kernel/main.o: kernel/main.c kernel/types.h kernel/param.h \
 - kernel/memlayout.h kernel/riscv.h kernel/defs.h
-Binary files xv6-riscv/kernel/main.o and xv6-riscv_modified/kernel/main.o differ
-diff -ruN xv6-riscv/kernel/pipe.d xv6-riscv_modified/kernel/pipe.d
+Binary files xv6-riscv/kernel/main.o and xv6-riscv_Modified/kernel/main.o differ
+diff -ruN xv6-riscv/kernel/pipe.d xv6-riscv_Modified/kernel/pipe.d
 --- xv6-riscv/kernel/pipe.d	2025-09-12 05:01:35.000000000 +0530
-+++ xv6-riscv_modified/kernel/pipe.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/pipe.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/pipe.o: kernel/pipe.c kernel/types.h kernel/riscv.h kernel/defs.h \
 - kernel/param.h kernel/spinlock.h kernel/proc.h kernel/fs.h \
 - kernel/sleeplock.h kernel/file.h
-Binary files xv6-riscv/kernel/pipe.o and xv6-riscv_modified/kernel/pipe.o differ
-diff -ruN xv6-riscv/kernel/plic.d xv6-riscv_modified/kernel/plic.d
+Binary files xv6-riscv/kernel/pipe.o and xv6-riscv_Modified/kernel/pipe.o differ
+diff -ruN xv6-riscv/kernel/plic.d xv6-riscv_Modified/kernel/plic.d
 --- xv6-riscv/kernel/plic.d	2025-09-12 05:01:35.000000000 +0530
-+++ xv6-riscv_modified/kernel/plic.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/plic.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -kernel/plic.o: kernel/plic.c kernel/types.h kernel/param.h \
 - kernel/memlayout.h kernel/riscv.h kernel/defs.h
-Binary files xv6-riscv/kernel/plic.o and xv6-riscv_modified/kernel/plic.o differ
-diff -ruN xv6-riscv/kernel/printf.d xv6-riscv_modified/kernel/printf.d
+Binary files xv6-riscv/kernel/plic.o and xv6-riscv_Modified/kernel/plic.o differ
+diff -ruN xv6-riscv/kernel/printf.d xv6-riscv_Modified/kernel/printf.d
 --- xv6-riscv/kernel/printf.d	2025-09-12 05:01:33.000000000 +0530
-+++ xv6-riscv_modified/kernel/printf.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/printf.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,5 +0,0 @@
 -kernel/printf.o: kernel/printf.c \
 - /usr/lib/gcc-cross/riscv64-linux-gnu/13/include/stdarg.h kernel/types.h \
 - kernel/param.h kernel/spinlock.h kernel/sleeplock.h kernel/fs.h \
 - kernel/file.h kernel/memlayout.h kernel/riscv.h kernel/defs.h \
 - kernel/proc.h
-Binary files xv6-riscv/kernel/printf.o and xv6-riscv_modified/kernel/printf.o differ
-diff -ruN xv6-riscv/kernel/proc.c xv6-riscv_modified/kernel/proc.c
+Binary files xv6-riscv/kernel/printf.o and xv6-riscv_Modified/kernel/printf.o differ
+diff -ruN xv6-riscv/kernel/proc.c xv6-riscv_Modified/kernel/proc.c
 --- xv6-riscv/kernel/proc.c	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/kernel/proc.c	2025-09-12 23:20:35.916578264 +0530
-@@ -145,6 +145,22 @@
-   memset(&p->context, 0, sizeof(p->context));
-   p->context.ra = (uint64)forkret;
-   p->context.sp = p->kstack + PGSIZE;
-+  
-+  // Initialize core scheduling fields
-+  acquire(&tickslock);
-+  p->creation_time = ticks;                     // Creation time for FCFS
-+  release(&tickslock);
-+  p->priority_level = 0;                        // Default priority level (neutral priority)
-+  p->process_weight = 1024;                     // Default weight (will be calculated later)
-+  p->virtual_runtime = 0;                       // Initialize virtual runtime
-+  p->allocated_slice = 0;                       // Will be computed per scheduling decision
-+  p->consumed_ticks = 0;                        // Reset tick counter
-+  
-+  // Initialize MLFQ fields
-+  p->queue_level = 0;      // Start in highest priority queue
-+  p->time_quantum_used = 0;
-+  p->time_quantum_limit = 1; // Queue 0 has 1 tick time slice
-+  p->queue_entry_time = ticks;
- 
-   return p;
- }
-@@ -411,6 +427,65 @@
++++ xv6-riscv_Modified/kernel/proc.c	2025-09-13 14:19:06.027272328 +0530
+@@ -29,40 +29,39 @@
+ // Allocate a page for each process's kernel stack.
+ // Map it high in memory, followed by an invalid
+ // guard page.
+-void
+-proc_mapstacks(pagetable_t kpgtbl)
++void proc_mapstacks(pagetable_t kpgtbl)
+ {
+   struct proc *p;
+-  
+-  for(p = proc; p < &proc[NPROC]; p++) {
++
++  for (p = proc; p < &proc[NPROC]; p++)
++  {
+     char *pa = kalloc();
+-    if(pa == 0)
++    if (pa == 0)
+       panic("kalloc");
+-    uint64 va = KSTACK((int) (p - proc));
++    uint64 va = KSTACK((int)(p - proc));
+     kvmmap(kpgtbl, va, (uint64)pa, PGSIZE, PTE_R | PTE_W);
    }
  }
  
+ // initialize the proc table.
+-void
+-procinit(void)
++void procinit(void)
+ {
+   struct proc *p;
+-  
++
+   initlock(&pid_lock, "nextpid");
+   initlock(&wait_lock, "wait_lock");
+-  for(p = proc; p < &proc[NPROC]; p++) {
+-      initlock(&p->lock, "proc");
+-      p->state = UNUSED;
+-      p->kstack = KSTACK((int) (p - proc));
++  for (p = proc; p < &proc[NPROC]; p++)
++  {
++    initlock(&p->lock, "proc");
++    p->state = UNUSED;
++    p->kstack = KSTACK((int)(p - proc));
+   }
+ }
+ 
+ // Must be called with interrupts disabled,
+ // to prevent race with process being moved
+ // to a different CPU.
+-int
+-cpuid()
++int cpuid()
+ {
+   int id = r_tp();
+   return id;
+@@ -70,7 +69,7 @@
+ 
+ // Return this CPU's cpu struct.
+ // Interrupts must be disabled.
+-struct cpu*
++struct cpu *
+ mycpu(void)
+ {
+   int id = cpuid();
+@@ -79,7 +78,7 @@
+ }
+ 
+ // Return the current struct proc *, or zero if none.
+-struct proc*
++struct proc *
+ myproc(void)
+ {
+   push_off();
+@@ -89,11 +88,10 @@
+   return p;
+ }
+ 
+-int
+-allocpid()
++int allocpid()
+ {
+   int pid;
+-  
++
+   acquire(&pid_lock);
+   pid = nextpid;
+   nextpid = nextpid + 1;
+@@ -106,16 +104,20 @@
+ // If found, initialize state required to run in the kernel,
+ // and return with p->lock held.
+ // If there are no free procs, or a memory allocation fails, return 0.
+-static struct proc*
++static struct proc *
+ allocproc(void)
+ {
+   struct proc *p;
+ 
+-  for(p = proc; p < &proc[NPROC]; p++) {
++  for (p = proc; p < &proc[NPROC]; p++)
++  {
+     acquire(&p->lock);
+-    if(p->state == UNUSED) {
++    if (p->state == UNUSED)
++    {
+       goto found;
+-    } else {
++    }
++    else
++    {
+       release(&p->lock);
+     }
+   }
+@@ -126,7 +128,8 @@
+   p->state = USED;
+ 
+   // Allocate a trapframe page.
+-  if((p->trapframe = (struct trapframe *)kalloc()) == 0){
++  if ((p->trapframe = (struct trapframe *)kalloc()) == 0)
++  {
+     freeproc(p);
+     release(&p->lock);
+     return 0;
+@@ -134,7 +137,8 @@
+ 
+   // An empty user page table.
+   p->pagetable = proc_pagetable(p);
+-  if(p->pagetable == 0){
++  if (p->pagetable == 0)
++  {
+     freeproc(p);
+     release(&p->lock);
+     return 0;
+@@ -146,6 +150,22 @@
+   p->context.ra = (uint64)forkret;
+   p->context.sp = p->kstack + PGSIZE;
+ 
++  // Initialize core scheduling fields
++  acquire(&tickslock);
++  p->creation_time = ticks; // Creation time for FCFS
++  release(&tickslock);
++  p->priority_level = 0;    // Default priority level (neutral priority)
++  p->process_weight = 1024; // Default weight (will be calculated later)
++  p->virtual_runtime = 0;   // Initialize virtual runtime
++  p->allocated_slice = 0;   // Will be computed per scheduling decision
++  p->consumed_ticks = 0;    // Reset tick counter
++
++  // Initialize MLFQ fields
++  p->queue_level = 0;     // Start in highest priority queue
++  p->time_slice_used = 0; // Time used in current slice
++  p->time_quantum = 1;    // Current quantum for this process
++  p->ticks_used_this_slice = 0;
++
+   return p;
+ }
+ 
+@@ -155,10 +175,10 @@
+ static void
+ freeproc(struct proc *p)
+ {
+-  if(p->trapframe)
+-    kfree((void*)p->trapframe);
++  if (p->trapframe)
++    kfree((void *)p->trapframe);
+   p->trapframe = 0;
+-  if(p->pagetable)
++  if (p->pagetable)
+     proc_freepagetable(p->pagetable, p->sz);
+   p->pagetable = 0;
+   p->sz = 0;
+@@ -180,23 +200,25 @@
+ 
+   // An empty page table.
+   pagetable = uvmcreate();
+-  if(pagetable == 0)
++  if (pagetable == 0)
+     return 0;
+ 
+   // map the trampoline code (for system call return)
+   // at the highest user virtual address.
+   // only the supervisor uses it, on the way
+   // to/from user space, so not PTE_U.
+-  if(mappages(pagetable, TRAMPOLINE, PGSIZE,
+-              (uint64)trampoline, PTE_R | PTE_X) < 0){
++  if (mappages(pagetable, TRAMPOLINE, PGSIZE,
++               (uint64)trampoline, PTE_R | PTE_X) < 0)
++  {
+     uvmfree(pagetable, 0);
+     return 0;
+   }
+ 
+   // map the trapframe page just below the trampoline page, for
+   // trampoline.S.
+-  if(mappages(pagetable, TRAPFRAME, PGSIZE,
+-              (uint64)(p->trapframe), PTE_R | PTE_W) < 0){
++  if (mappages(pagetable, TRAPFRAME, PGSIZE,
++               (uint64)(p->trapframe), PTE_R | PTE_W) < 0)
++  {
+     uvmunmap(pagetable, TRAMPOLINE, 1, 0);
+     uvmfree(pagetable, 0);
+     return 0;
+@@ -207,8 +229,7 @@
+ 
+ // Free a process's page table, and free the
+ // physical memory it refers to.
+-void
+-proc_freepagetable(pagetable_t pagetable, uint64 sz)
++void proc_freepagetable(pagetable_t pagetable, uint64 sz)
+ {
+   uvmunmap(pagetable, TRAMPOLINE, 1, 0);
+   uvmunmap(pagetable, TRAPFRAME, 1, 0);
+@@ -216,14 +237,13 @@
+ }
+ 
+ // Set up first user process.
+-void
+-userinit(void)
++void userinit(void)
+ {
+   struct proc *p;
+ 
+   p = allocproc();
+   initproc = p;
+-  
++
+   p->cwd = namei("/");
+ 
+   p->state = RUNNABLE;
+@@ -233,18 +253,21 @@
+ 
+ // Shrink user memory by n bytes.
+ // Return 0 on success, -1 on failure.
+-int
+-growproc(int n)
++int growproc(int n)
+ {
+   uint64 sz;
+   struct proc *p = myproc();
+ 
+   sz = p->sz;
+-  if(n > 0){
+-    if((sz = uvmalloc(p->pagetable, sz, sz + n, PTE_W)) == 0) {
++  if (n > 0)
++  {
++    if ((sz = uvmalloc(p->pagetable, sz, sz + n, PTE_W)) == 0)
++    {
+       return -1;
+     }
+-  } else if(n < 0){
++  }
++  else if (n < 0)
++  {
+     sz = uvmdealloc(p->pagetable, sz, sz + n);
+   }
+   p->sz = sz;
+@@ -253,20 +276,21 @@
+ 
+ // Create a new process, copying the parent.
+ // Sets up child kernel stack to return as if from fork() system call.
+-int
+-kfork(void)
++int kfork(void)
+ {
+   int i, pid;
+   struct proc *np;
+   struct proc *p = myproc();
+ 
+   // Allocate process.
+-  if((np = allocproc()) == 0){
++  if ((np = allocproc()) == 0)
++  {
+     return -1;
+   }
+ 
+   // Copy user memory from parent to child.
+-  if(uvmcopy(p->pagetable, np->pagetable, p->sz) < 0){
++  if (uvmcopy(p->pagetable, np->pagetable, p->sz) < 0)
++  {
+     freeproc(np);
+     release(&np->lock);
+     return -1;
+@@ -280,8 +304,8 @@
+   np->trapframe->a0 = 0;
+ 
+   // increment reference counts on open file descriptors.
+-  for(i = 0; i < NOFILE; i++)
+-    if(p->ofile[i])
++  for (i = 0; i < NOFILE; i++)
++    if (p->ofile[i])
+       np->ofile[i] = filedup(p->ofile[i]);
+   np->cwd = idup(p->cwd);
+ 
+@@ -304,13 +328,14 @@
+ 
+ // Pass p's abandoned children to init.
+ // Caller must hold wait_lock.
+-void
+-reparent(struct proc *p)
++void reparent(struct proc *p)
+ {
+   struct proc *pp;
+ 
+-  for(pp = proc; pp < &proc[NPROC]; pp++){
+-    if(pp->parent == p){
++  for (pp = proc; pp < &proc[NPROC]; pp++)
++  {
++    if (pp->parent == p)
++    {
+       pp->parent = initproc;
+       wakeup(initproc);
+     }
+@@ -320,17 +345,18 @@
+ // Exit the current process.  Does not return.
+ // An exited process remains in the zombie state
+ // until its parent calls wait().
+-void
+-kexit(int status)
++void kexit(int status)
+ {
+   struct proc *p = myproc();
+ 
+-  if(p == initproc)
++  if (p == initproc)
+     panic("init exiting");
+ 
+   // Close all open files.
+-  for(int fd = 0; fd < NOFILE; fd++){
+-    if(p->ofile[fd]){
++  for (int fd = 0; fd < NOFILE; fd++)
++  {
++    if (p->ofile[fd])
++    {
+       struct file *f = p->ofile[fd];
+       fileclose(f);
+       p->ofile[fd] = 0;
+@@ -349,7 +375,7 @@
+ 
+   // Parent might be sleeping in wait().
+   wakeup(p->parent);
+-  
++
+   acquire(&p->lock);
+ 
+   p->xstate = status;
+@@ -364,8 +390,7 @@
+ 
+ // Wait for a child process to exit and return its pid.
+ // Return -1 if this process has no children.
+-int
+-kwait(uint64 addr)
++int kwait(uint64 addr)
+ {
+   struct proc *pp;
+   int havekids, pid;
+@@ -373,20 +398,25 @@
+ 
+   acquire(&wait_lock);
+ 
+-  for(;;){
++  for (;;)
++  {
+     // Scan through table looking for exited children.
+     havekids = 0;
+-    for(pp = proc; pp < &proc[NPROC]; pp++){
+-      if(pp->parent == p){
++    for (pp = proc; pp < &proc[NPROC]; pp++)
++    {
++      if (pp->parent == p)
++      {
+         // make sure the child isn't still in exit() or swtch().
+         acquire(&pp->lock);
+ 
+         havekids = 1;
+-        if(pp->state == ZOMBIE){
++        if (pp->state == ZOMBIE)
++        {
+           // Found one.
+           pid = pp->pid;
+-          if(addr != 0 && copyout(p->pagetable, addr, (char *)&pp->xstate,
+-                                  sizeof(pp->xstate)) < 0) {
++          if (addr != 0 && copyout(p->pagetable, addr, (char *)&pp->xstate,
++                                   sizeof(pp->xstate)) < 0)
++          {
+             release(&pp->lock);
+             release(&wait_lock);
+             return -1;
+@@ -401,14 +431,87 @@
+     }
+ 
+     // No point waiting if we don't have any children.
+-    if(!havekids || killed(p)){
++    if (!havekids || killed(p))
++    {
+       release(&wait_lock);
+       return -1;
+     }
+-    
++
+     // Wait for a child to exit.
+-    sleep(p, &wait_lock);  //DOC: wait-sleep
++    sleep(p, &wait_lock); // DOC: wait-sleep
++  }
++}
++
 +#if ACTIVE_SCHEDULER == SCHED_CFS
 +// Compute process weight from nice value using integer arithmetic
 +// Higher nice -> lower weight -> less CPU time
 +// Lower nice -> higher weight -> more CPU time
-+static uint64 calculate_weight_from_priority(int nice_value) {
++static uint64 calculate_weight_from_priority(int nice_value)
++{
 +  // Clamp nice value to valid range [-20, 19]
-+  if (nice_value < -20) nice_value = -20;
-+  if (nice_value > 19) nice_value = 19;
-+  
++  if (nice_value < -20)
++    nice_value = -20;
++  if (nice_value > 19)
++    nice_value = 19;
++
 +  // Base weight for nice=0
 +  uint64 base_weight = 1024;
-+  
-+  if (nice_value > 0) {
++
++  if (nice_value > 0)
++  {
 +    // Positive nice: reduce weight (lower priority)
-+    // Use 4/5 ratio to approximate 1/1.25 
-+    for (int i = 0; i < nice_value; i++) {
++    // Use 4/5 ratio to approximate 1/1.25
++    for (int i = 0; i < nice_value; i++)
++    {
 +      base_weight = (base_weight * 4 + 2) / 5; // +2 for rounding
-+      if (base_weight < 1) base_weight = 1;   // Ensure minimum weight
++      if (base_weight < 1)
++        base_weight = 1; // Ensure minimum weight
 +    }
-+  } else if (nice_value < 0) {
+   }
++  else if (nice_value < 0)
++  {
 +    // Negative nice: increase weight (higher priority)
 +    // Use 5/4 ratio to approximate 1.25
-+    for (int i = 0; i < -nice_value; i++) {
++    for (int i = 0; i < -nice_value; i++)
++    {
 +      base_weight = (base_weight * 5 + 2) / 4; // +2 for rounding
 +    }
 +  }
-+  
++
 +  return (base_weight < 1) ? 1 : base_weight;
 +}
 +#endif
 +
-+
 +// CFS tick update with detailed vruntime progression
-+void update_virtual_runtime_on_tick() {
++void update_virtual_runtime_on_tick()
++{
 +  struct proc *current = myproc();
-+  if (current == 0) return;
-+  
-+  // Only update for CFS
-+  #ifdef CFS
++  if (current == 0)
++    return;
++
++// Only update for CFS
++#ifdef CFS
 +  uint64 weight = current->process_weight > 0 ? current->process_weight : 1024;
 +  uint64 delta = (1024 * VRUNTIME_SCALE_FACTOR) / weight;
-+  
++
 +  uint64 old_vruntime = current->virtual_runtime;
 +  current->virtual_runtime += delta;
-+  
-+  if (current->virtual_runtime >= 5000 && (current->virtual_runtime - old_vruntime == delta)) {
-+    printf("PID %d virtual_runtime: %lu -> %lu (delta: %lu)\n", 
++
++  if (current->virtual_runtime >= 5000 && (current->virtual_runtime - old_vruntime == delta))
++  {
++    printf("PID %d virtual_runtime: %lu -> %lu (delta: %lu)\n",
 +           current->pid, (unsigned long)old_vruntime, (unsigned long)current->virtual_runtime, (unsigned long)delta);
 +  }
-+  
-+  if (current->allocated_slice > 0) {
++
++  if (current->allocated_slice > 0)
++  {
 +    current->consumed_ticks++;
-+    if (current->consumed_ticks >= current->allocated_slice) {
++    if (current->consumed_ticks >= current->allocated_slice)
++    {
 +      yield();
 +    }
 +  }
-+  #endif
-+}
-+
++#endif
+ }
+ 
  // Per-CPU process scheduler.
- // Each CPU calls scheduler() after setting itself up.
- // Scheduler never returns.  It loops, doing:
-@@ -435,6 +510,220 @@
+@@ -418,14 +521,15 @@
+ //  - swtch to start running that process.
+ //  - eventually that process transfers control
+ //    via swtch back to the scheduler.
+-void
++void 
+ scheduler(void)
+ {
+   struct proc *p;
+   struct cpu *c = mycpu();
+ 
+   c->proc = 0;
+-  for(;;){
++  for (;;)
++  {
+     // The most recent process to run may have had interrupts
+     // turned off; enable them to avoid a deadlock if all
+     // processes are waiting. Then turn them back off
+@@ -435,9 +539,292 @@
      intr_off();
  
      int found = 0;
-+    
+-    for(p = proc; p < &proc[NPROC]; p++) {
++
 +#if ACTIVE_SCHEDULER == SCHED_FCFS
 +    // First Come First Serve: Non-preemptive, earliest creation time wins
 +    static int fcfs_first_run = 1;
-+    if (fcfs_first_run) {
++    if (fcfs_first_run)
++    {
 +      printf("\nFCFS (First Come First Serve) SCHEDULER\n");
 +      fcfs_first_run = 0;
 +    }
-+    
++
 +    struct proc *earliest_proc = 0;
 +    uint64 earliest_creation_time = 0;
-+    
++
 +    // Scan for runnable process with earliest creation time
-+    for (p = proc; p < &proc[NPROC]; p++) {
-+      acquire(&p->lock);
-+      if (p->state == RUNNABLE) {
-+        if (earliest_proc == 0 || p->creation_time < earliest_creation_time) {
-+          if (earliest_proc != 0) {
++    for (p = proc; p < &proc[NPROC]; p++)
++    {
+       acquire(&p->lock);
+-      if(p->state == RUNNABLE) {
++      if (p->state == RUNNABLE)
++      {
++        if (earliest_proc == 0 || p->creation_time < earliest_creation_time)
++        {
++          if (earliest_proc != 0)
++          {
 +            release(&earliest_proc->lock);
 +          }
 +          earliest_proc = p;
 +          earliest_creation_time = p->creation_time;
 +          // Keep lock for selected process
-+        } else {
++        }
++        else
++        {
 +          release(&p->lock);
 +        }
-+      } else {
++      }
++      else
++      {
 +        release(&p->lock);
 +      }
 +    }
-+    
-+    if (earliest_proc != 0) {
++
++    if (earliest_proc != 0)
++    {
 +      // Debug output for FCFS scheduling decision (limited frequency)
 +      static int schedule_count = 0;
-+      if ((++schedule_count % 100) == 0) {
-+        printf("[FCFS] Running PID %d (creation_time: %lu) - non-preemptive\n", 
++      if ((++schedule_count % 100) == 0)
++      {
++        printf("[FCFS] Running PID %d (creation_time: %lu) - non-preemptive\n",
 +               earliest_proc->pid, (unsigned long)earliest_proc->creation_time);
 +      }
-+      
++
 +      // Run the earliest process (lock still held)
 +      earliest_proc->state = RUNNING;
 +      c->proc = earliest_proc;
@@ -13425,218 +13812,510 @@ diff -ruN xv6-riscv/kernel/proc.c xv6-riscv_modified/kernel/proc.c
 +      found = 1;
 +      release(&earliest_proc->lock);
 +    }
-+    
-+#elif defined(MLFQ)
-+    // Multi-Level Feedback Queue Scheduler
-+    struct proc *selected = 0;
-+    
-+    // Check for starvation prevention every 48 ticks
-+    static uint64 last_boost_time = 0;
-+    acquire(&tickslock);
-+    uint64 current_ticks = ticks;
-+    release(&tickslock);
-+    
-+    if (current_ticks - last_boost_time >= 48) {
-+      // Boost all processes to queue 0
-+      for (p = proc; p < &proc[NPROC]; p++) {
++
++#elif ACTIVE_SCHEDULER == SCHED_MLFQ
++    static int mlfq_first_run = 1;
++    static int last_pid = -1;
++    static int global_ticks = 0;
++    static int boost_interval = 48;
++
++    if (mlfq_first_run)
++    {
++      printf("MLFQ (Multi-Level Feedback Queue) Scheduler Started\n");
++      mlfq_first_run = 0;
++    }
++
++    global_ticks++;
++
++    if (global_ticks >= boost_interval)
++    {
++      int boosted = 0;
++      for (p = proc; p < &proc[NPROC]; p++)
++      {
 +        acquire(&p->lock);
-+        if (p->state == RUNNABLE || p->state == RUNNING) {
++        if (p->state != UNUSED && p->queue_level > 0)
++        {
 +          p->queue_level = 0;
-+          p->time_quantum_used = 0;
-+          p->time_quantum_limit = 1;
-+          p->queue_entry_time = current_ticks;
++          p->time_slice_used = 0;
++          boosted++;
 +        }
 +        release(&p->lock);
 +      }
-+      last_boost_time = current_ticks;
-+      printf("MLFQ: Boosted all processes to queue 0\n");
++      if (boosted > 0)
++      {
++        printf("MLFQ: Priority boost - moved %d processes to Q0\n", boosted);
++      }
++      global_ticks = 0;
 +    }
-+    
-+    // Find process in highest priority non-empty queue
-+    for (int queue = 0; queue < 4; queue++) {
-+      for (p = proc; p < &proc[NPROC]; p++) {
++
++    struct proc *selected = 0;
++    int selected_queue = -1;
++
++    for (int q = 0; q < 4 && !selected; q++)
++    {
++      for (p = proc; p < &proc[NPROC]; p++)
++      {
 +        acquire(&p->lock);
-+        if (p->state == RUNNABLE && p->queue_level == queue) {
-+          if (selected == 0) {
-+            selected = p;
-+            break;
-+          }
++        if (p->state == RUNNABLE && p->queue_level == q)
++        {
++          selected = p;
++          selected_queue = q;
++          release(&p->lock);
++          break;
 +        }
 +        release(&p->lock);
 +      }
-+      if (selected != 0) break;
 +    }
-+    if (selected != 0) {
-+      // Set time quantum based on queue level
-+      int time_slices[] = {1, 4, 8, 16};
-+      selected->time_quantum_limit = time_slices[selected->queue_level];
-+      
-+      printf("MLFQ: Running PID %d from queue %d (quantum: %d)\n", 
-+             selected->pid, selected->queue_level, selected->time_quantum_limit);
-+      
-+      selected->state = RUNNING;
-+      c->proc = selected;
-+      
-+      acquire(&tickslock);
-+      uint64 start_time = ticks;
-+      release(&tickslock);
-+      
-+      swtch(&c->context, &selected->context);
-+      
-+      acquire(&tickslock);
-+      uint64 elapsed = ticks - start_time;
-+      release(&tickslock);
-+      
-+      selected->time_quantum_used += elapsed;
-+      
-+      // Check if process used full time slice
-+      if (selected->time_quantum_used >= selected->time_quantum_limit) {
-+        // Move to next lower queue (unless already in queue 3)
-+        if (selected->queue_level < 3) {
-+          selected->queue_level++;
-+          printf("MLFQ: PID %d demoted to queue %d\n", selected->pid, selected->queue_level);
++
++    if (selected)
++    {
++      acquire(&selected->lock);
++
++      if (selected->state == RUNNABLE)
++      {
++        int time_quantum;
++        switch (selected_queue)
++        {
++        case 0:
++          time_quantum = 1;
++          break;
++        case 1:
++          time_quantum = 4;
++          break;
++        case 2:
++          time_quantum = 8;
++          break;
++        case 3:
++          time_quantum = 16;
++          break;
++        default:
++          time_quantum = 1;
++          break;
 +        }
-+        selected->time_quantum_used = 0;
-+        selected->queue_entry_time = ticks;
++
++        if (selected->pid != last_pid && selected->pid > 2)
++        {
++          printf("MLFQ: Running PID %d (Q%d, quantum=%d)\n",
++                 selected->pid, selected_queue, time_quantum);
++          last_pid = selected->pid;
++        }
++
++        selected->state = RUNNING;
++        c->proc = selected;
++
++        selected->time_quantum = time_quantum;
++        selected->ticks_used_this_slice = 0;
++
++        swtch(&c->context, &selected->context);
++
++        c->proc = 0;
++
++        if (selected->state == RUNNABLE)
++        {
++        }
++        else if (selected->ticks_used_this_slice >= time_quantum)
++        {
++          if (selected_queue < 3)
++          {
++            selected->queue_level++;
++            printf("MLFQ: PID %d demoted to Q%d (used full quantum)\n",
++                   selected->pid, selected->queue_level);
++          }
++          selected->time_slice_used = 0;
++        }
++
++        selected->ticks_used_this_slice = 0;
 +      }
-+      
-+      c->proc = 0;
-+      found = 1;
++
 +      release(&selected->lock);
 +    }
-+    
++
 +#elif ACTIVE_SCHEDULER == SCHED_CFS
 +    // Completely Fair Scheduler: Pick process with minimum vruntime
 +    static int cfs_first_run = 1;
-+    if (cfs_first_run) {
-+      printf("\nCFS (Completely Fair Scheduler)\n");
-+      cfs_first_run = 0;
-+    }
-+    
-+    struct proc *min_vruntime_proc = 0;
-+    uint64 minimum_vruntime = ~0ULL;
-+    int total_runnable = 0;
-+    
-+    // First scan: count runnable processes
-+    for (p = proc; p < &proc[NPROC]; p++) {
++if (cfs_first_run)
++{
++  printf("\nCFS (Completely Fair Scheduler)\n");
++  cfs_first_run = 0;
++}
++
++struct proc *min_vruntime_proc = 0;
++uint64 minimum_vruntime = ~0ULL;
++int total_runnable = 0;
++
++// First scan: count runnable processes
++for (p = proc; p < &proc[NPROC]; p++)
++{
++  acquire(&p->lock);
++  if (p->state == RUNNABLE)
++  {
++    total_runnable++;
++  }
++  release(&p->lock);
++}
++
++// Only proceed if there are runnable processes
++if (total_runnable > 0)
++{
++  // Print scheduler tick header for every decision when multiple processes exist
++  if (total_runnable > 1)
++  {
++    printf("[Scheduler Tick]\n");
++
++    // Show all runnable processes with their vruntime
++    for (p = proc; p < &proc[NPROC]; p++)
++    {
 +      acquire(&p->lock);
-+      if (p->state == RUNNABLE) {
-+        total_runnable++;
++      if (p->state == RUNNABLE)
++      {
++        printf("PID: %d | vRuntime: %lu\n", p->pid, (unsigned long)p->virtual_runtime);
 +      }
 +      release(&p->lock);
 +    }
-+    
-+    // Only proceed if there are runnable processes
-+    if (total_runnable > 0) {
-+      // Print scheduler tick header for every decision when multiple processes exist
-+      if (total_runnable > 1) {
-+        printf("[Scheduler Tick]\n");
-+        
-+        // Show all runnable processes with their vruntime
-+        for (p = proc; p < &proc[NPROC]; p++) {
-+          acquire(&p->lock);
-+          if (p->state == RUNNABLE) {
-+            printf("PID: %d | vRuntime: %lu\n", p->pid, (unsigned long)p->virtual_runtime);
-+          }
-+          release(&p->lock);
++  }
++
++  // Second scan: select process with minimum vruntime
++  for (p = proc; p < &proc[NPROC]; p++)
++  {
++    acquire(&p->lock);
++    if (p->state == RUNNABLE)
++    {
++      if (min_vruntime_proc == 0 || p->virtual_runtime < minimum_vruntime)
++      {
++        if (min_vruntime_proc != 0)
++        {
++          release(&min_vruntime_proc->lock);
 +        }
++        min_vruntime_proc = p;
++        minimum_vruntime = p->virtual_runtime;
++        // Keep lock for selected process
 +      }
-+      
-+      // Second scan: select process with minimum vruntime
-+      for (p = proc; p < &proc[NPROC]; p++) {
-+        acquire(&p->lock);
-+        if (p->state == RUNNABLE) {
-+          if (min_vruntime_proc == 0 || p->virtual_runtime < minimum_vruntime) {
-+            if (min_vruntime_proc != 0) {
-+              release(&min_vruntime_proc->lock);
-+            }
-+            min_vruntime_proc = p;
-+            minimum_vruntime = p->virtual_runtime;
-+            // Keep lock for selected process
-+          } else {
-+            release(&p->lock);
-+          }
-+        } else {
-+          release(&p->lock);
-+        }
-+      }
-+      
-+      // Announce which process was selected (when multiple processes compete)
-+      if (min_vruntime_proc != 0 && total_runnable > 1) {
-+        printf("--> Scheduling PID %d (lowest vRuntime)\n\n", min_vruntime_proc->pid);
-+      }
-+      
-+      if (min_vruntime_proc != 0) {
-+        // Compute dynamic time slice based on system load
-+        int target_latency_ticks = 48;
-+        int computed_slice = target_latency_ticks / total_runnable;
-+        if (computed_slice < 3) computed_slice = 3; // Enforce minimum
-+        
-+        min_vruntime_proc->allocated_slice = computed_slice;
-+        min_vruntime_proc->consumed_ticks = 0; // Reset tick counter
-+        
-+        // Update weight based on priority level
-+        min_vruntime_proc->process_weight = calculate_weight_from_priority(min_vruntime_proc->priority_level);
-+        
-+        // Execute the selected process
-+        min_vruntime_proc->state = RUNNING;
-+        c->proc = min_vruntime_proc;
-+        
-+        swtch(&c->context, &min_vruntime_proc->context);
-+        
-+        c->proc = 0;
-+        found = 1;
-+        release(&min_vruntime_proc->lock);
++      else
++      {
++        release(&p->lock);
 +      }
 +    }
-+    
++    else
++    {
++      release(&p->lock);
++    }
++  }
++
++  // Announce which process was selected (when multiple processes compete)
++  if (min_vruntime_proc != 0 && total_runnable > 1)
++  {
++    printf("--> Scheduling PID %d (lowest vRuntime)\n\n", min_vruntime_proc->pid);
++  }
++
++  if (min_vruntime_proc != 0)
++  {
++    // Compute dynamic time slice based on system load
++    int target_latency_ticks = 48;
++    int computed_slice = target_latency_ticks / total_runnable;
++    if (computed_slice < 3)
++      computed_slice = 3; // Enforce minimum
++
++    min_vruntime_proc->allocated_slice = computed_slice;
++    min_vruntime_proc->consumed_ticks = 0; // Reset tick counter
++
++    // Update weight based on priority level
++    min_vruntime_proc->process_weight = calculate_weight_from_priority(min_vruntime_proc->priority_level);
++
++    // Execute the selected process
++    min_vruntime_proc->state = RUNNING;
++    c->proc = min_vruntime_proc;
++
++    swtch(&c->context, &min_vruntime_proc->context);
++
++    c->proc = 0;
++    found = 1;
++    release(&min_vruntime_proc->lock);
++  }
++}
++
 +#else
 +    // Default Round Robin Scheduler
-     for(p = proc; p < &proc[NPROC]; p++) {
-       acquire(&p->lock);
-       if(p->state == RUNNABLE) {
-@@ -452,6 +741,8 @@
++    for (p = proc; p < &proc[NPROC]; p++)
++    {
++      acquire(&p->lock);
++      if (p->state == RUNNABLE)
++      {
+         // Switch to chosen process.  It is the process's job
+         // to release its lock and then reacquire it
+         // before jumping back to us.
+@@ -452,7 +839,10 @@
        }
        release(&p->lock);
      }
+-    if(found == 0) {
 +#endif
-+    
-     if(found == 0) {
++
++    if (found == 0)
++    {
        // nothing to run; stop running on this core until an interrupt.
        asm volatile("wfi");
-@@ -674,6 +965,9 @@
+     }
+@@ -466,19 +856,18 @@
+ // be proc->intena and proc->noff, but that would
+ // break in the few places where a lock is held but
+ // there's no process.
+-void
+-sched(void)
++void sched(void)
+ {
+   int intena;
+   struct proc *p = myproc();
+ 
+-  if(!holding(&p->lock))
++  if (!holding(&p->lock))
+     panic("sched p->lock");
+-  if(mycpu()->noff != 1)
++  if (mycpu()->noff != 1)
+     panic("sched locks");
+-  if(p->state == RUNNING)
++  if (p->state == RUNNING)
+     panic("sched RUNNING");
+-  if(intr_get())
++  if (intr_get())
+     panic("sched interruptible");
+ 
+   intena = mycpu()->intena;
+@@ -487,8 +876,7 @@
+ }
+ 
+ // Give up the CPU for one scheduling round.
+-void
+-yield(void)
++void yield(void)
+ {
+   struct proc *p = myproc();
+   acquire(&p->lock);
+@@ -499,8 +887,7 @@
+ 
+ // A fork child's very first scheduling by scheduler()
+ // will swtch to forkret.
+-void
+-forkret(void)
++void forkret(void)
+ {
+   extern char userret[];
+   static int first = 1;
+@@ -509,7 +896,8 @@
+   // Still holding p->lock from scheduler.
+   release(&p->lock);
+ 
+-  if (first) {
++  if (first)
++  {
+     // File system initialization must be run in the context of a
+     // regular process (e.g., because it calls sleep), and thus cannot
+     // be run from main().
+@@ -521,8 +909,9 @@
+ 
+     // We can invoke kexec() now that file system is initialized.
+     // Put the return value (argc) of kexec into a0.
+-    p->trapframe->a0 = kexec("/init", (char *[]){ "/init", 0 });
+-    if (p->trapframe->a0 == -1) {
++    p->trapframe->a0 = kexec("/init", (char *[]){"/init", 0});
++    if (p->trapframe->a0 == -1)
++    {
+       panic("exec");
+     }
+   }
+@@ -536,11 +925,10 @@
+ 
+ // Sleep on channel chan, releasing condition lock lk.
+ // Re-acquires lk when awakened.
+-void
+-sleep(void *chan, struct spinlock *lk)
++void sleep(void *chan, struct spinlock *lk)
+ {
+   struct proc *p = myproc();
+-  
++
+   // Must acquire p->lock in order to
+   // change p->state and then call sched.
+   // Once we hold p->lock, we can be
+@@ -548,7 +936,7 @@
+   // (wakeup locks p->lock),
+   // so it's okay to release lk.
+ 
+-  acquire(&p->lock);  //DOC: sleeplock1
++  acquire(&p->lock); // DOC: sleeplock1
+   release(lk);
+ 
+   // Go to sleep.
+@@ -567,15 +955,17 @@
+ 
+ // Wake up all processes sleeping on channel chan.
+ // Caller should hold the condition lock.
+-void
+-wakeup(void *chan)
++void wakeup(void *chan)
+ {
+   struct proc *p;
+ 
+-  for(p = proc; p < &proc[NPROC]; p++) {
+-    if(p != myproc()){
++  for (p = proc; p < &proc[NPROC]; p++)
++  {
++    if (p != myproc())
++    {
+       acquire(&p->lock);
+-      if(p->state == SLEEPING && p->chan == chan) {
++      if (p->state == SLEEPING && p->chan == chan)
++      {
+         p->state = RUNNABLE;
+       }
+       release(&p->lock);
+@@ -586,16 +976,18 @@
+ // Kill the process with the given pid.
+ // The victim won't exit until it tries to return
+ // to user space (see usertrap() in trap.c).
+-int
+-kkill(int pid)
++int kkill(int pid)
+ {
+   struct proc *p;
+ 
+-  for(p = proc; p < &proc[NPROC]; p++){
++  for (p = proc; p < &proc[NPROC]; p++)
++  {
+     acquire(&p->lock);
+-    if(p->pid == pid){
++    if (p->pid == pid)
++    {
+       p->killed = 1;
+-      if(p->state == SLEEPING){
++      if (p->state == SLEEPING)
++      {
+         // Wake process from sleep().
+         p->state = RUNNABLE;
+       }
+@@ -607,19 +999,17 @@
+   return -1;
+ }
+ 
+-void
+-setkilled(struct proc *p)
++void setkilled(struct proc *p)
+ {
+   acquire(&p->lock);
+   p->killed = 1;
+   release(&p->lock);
+ }
+ 
+-int
+-killed(struct proc *p)
++int killed(struct proc *p)
+ {
+   int k;
+-  
++
+   acquire(&p->lock);
+   k = p->killed;
+   release(&p->lock);
+@@ -629,13 +1019,15 @@
+ // Copy to either a user address, or kernel address,
+ // depending on usr_dst.
+ // Returns 0 on success, -1 on error.
+-int
+-either_copyout(int user_dst, uint64 dst, void *src, uint64 len)
++int either_copyout(int user_dst, uint64 dst, void *src, uint64 len)
+ {
+   struct proc *p = myproc();
+-  if(user_dst){
++  if (user_dst)
++  {
+     return copyout(p->pagetable, dst, src, len);
+-  } else {
++  }
++  else
++  {
+     memmove((char *)dst, src, len);
+     return 0;
+   }
+@@ -644,14 +1036,16 @@
+ // Copy from either a user address, or kernel address,
+ // depending on usr_src.
+ // Returns 0 on success, -1 on error.
+-int
+-either_copyin(void *dst, int user_src, uint64 src, uint64 len)
++int either_copyin(void *dst, int user_src, uint64 src, uint64 len)
+ {
+   struct proc *p = myproc();
+-  if(user_src){
++  if (user_src)
++  {
+     return copyin(p->pagetable, dst, src, len);
+-  } else {
+-    memmove(dst, (char*)src, len);
++  }
++  else
++  {
++    memmove(dst, (char *)src, len);
+     return 0;
+   }
+ }
+@@ -659,29 +1053,33 @@
+ // Print a process listing to console.  For debugging.
+ // Runs when user types ^P on console.
+ // No lock to avoid wedging a stuck machine further.
+-void
+-procdump(void)
++void procdump(void)
+ {
+   static char *states[] = {
+-  [UNUSED]    "unused",
+-  [USED]      "used",
+-  [SLEEPING]  "sleep ",
+-  [RUNNABLE]  "runble",
+-  [RUNNING]   "run   ",
+-  [ZOMBIE]    "zombie"
+-  };
++      [UNUSED] "unused",
++      [USED] "used",
++      [SLEEPING] "sleep ",
++      [RUNNABLE] "runble",
++      [RUNNING] "run   ",
++      [ZOMBIE] "zombie"};
+   struct proc *p;
    char *state;
  
    printf("\n");
+-  for(p = proc; p < &proc[NPROC]; p++){
+-    if(p->state == UNUSED)
 +  printf("PID\tSTATE\tNAME\t\tCTIME\tNICE\tVRUNTIME\tWEIGHT\n");
 +  printf("===\t=====\t====\t\t=====\t====\t========\t======\n");
-+  
-   for(p = proc; p < &proc[NPROC]; p++){
-     if(p->state == UNUSED)
++
++  for (p = proc; p < &proc[NPROC]; p++)
++  {
++    if (p->state == UNUSED)
        continue;
-@@ -681,7 +975,9 @@
+-    if(p->state >= 0 && p->state < NELEM(states) && states[p->state])
++    if (p->state >= 0 && p->state < NELEM(states) && states[p->state])
        state = states[p->state];
      else
        state = "???";
 -    printf("%d %s %s", p->pid, state, p->name);
 -    printf("\n");
-+    
-+    printf("%d\t%s\t%s\t\t%ld\t%d\t%ld\t\t%ld\n", 
++
++    printf("%d\t%s\t%s\t\t%ld\t%d\t%ld\t\t%ld\n",
 +           p->pid, state, p->name, p->creation_time, p->priority_level, p->virtual_runtime, p->process_weight);
    }
 +  printf("\n");
  }
-diff -ruN xv6-riscv/kernel/proc.d xv6-riscv_modified/kernel/proc.d
+diff -ruN xv6-riscv/kernel/proc.d xv6-riscv_Modified/kernel/proc.d
 --- xv6-riscv/kernel/proc.d	2025-09-12 05:01:34.000000000 +0530
-+++ xv6-riscv_modified/kernel/proc.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/proc.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/proc.o: kernel/proc.c kernel/types.h kernel/param.h \
 - kernel/memlayout.h kernel/riscv.h kernel/spinlock.h kernel/proc.h \
 - kernel/defs.h
-diff -ruN xv6-riscv/kernel/proc.h xv6-riscv_modified/kernel/proc.h
+diff -ruN xv6-riscv/kernel/proc.h xv6-riscv_Modified/kernel/proc.h
 --- xv6-riscv/kernel/proc.h	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/kernel/proc.h	2025-09-12 22:43:58.678837797 +0530
-@@ -81,6 +81,23 @@
++++ xv6-riscv_Modified/kernel/proc.h	2025-09-13 13:55:11.901988662 +0530
+@@ -81,6 +81,26 @@
  
  enum procstate { UNUSED, USED, SLEEPING, RUNNABLE, RUNNING, ZOMBIE };
  
@@ -13644,12 +14323,15 @@ diff -ruN xv6-riscv/kernel/proc.h xv6-riscv_modified/kernel/proc.h
 +#define SCHED_DEFAULT 0
 +#define SCHED_FCFS    1 
 +#define SCHED_CFS     2
++#define SCHED_MLFQ    3
 +
 +// Determine active scheduler
 +#ifdef FCFS
 +#define ACTIVE_SCHEDULER SCHED_FCFS
 +#elif defined(CFS)
 +#define ACTIVE_SCHEDULER SCHED_CFS
++#elif defined(MLFQ)
++#define ACTIVE_SCHEDULER SCHED_MLFQ
 +#else
 +#define ACTIVE_SCHEDULER SCHED_DEFAULT
 +#endif
@@ -13660,7 +14342,7 @@ diff -ruN xv6-riscv/kernel/proc.h xv6-riscv_modified/kernel/proc.h
  // Per-process state
  struct proc {
    struct spinlock lock;
-@@ -104,4 +121,17 @@
+@@ -104,4 +124,17 @@
    struct file *ofile[NOFILE];  // Open files
    struct inode *cwd;           // Current directory
    char name[16];               // Process name (debugging)
@@ -13673,45 +14355,45 @@ diff -ruN xv6-riscv/kernel/proc.h xv6-riscv_modified/kernel/proc.h
 +  int consumed_ticks;          // Ticks consumed in current slice
 +  
 +  // MLFQ fields
-+  int queue_level;             // Current queue level (0-3)
-+  int time_quantum_used;       // Time used in current quantum
-+  int time_quantum_limit;      // Time limit for current queue
-+  uint64 queue_entry_time;     // When process entered current queue
++  int queue_level;           // MLFQ queue level (0-3)
++  int time_slice_used;       // Time used in current slice
++  int time_quantum;          // Current quantum for this process
++  int ticks_used_this_slice;
  };
-Binary files xv6-riscv/kernel/proc.o and xv6-riscv_modified/kernel/proc.o differ
-diff -ruN xv6-riscv/kernel/sleeplock.d xv6-riscv_modified/kernel/sleeplock.d
+Binary files xv6-riscv/kernel/proc.o and xv6-riscv_Modified/kernel/proc.o differ
+diff -ruN xv6-riscv/kernel/sleeplock.d xv6-riscv_Modified/kernel/sleeplock.d
 --- xv6-riscv/kernel/sleeplock.d	2025-09-12 05:01:35.000000000 +0530
-+++ xv6-riscv_modified/kernel/sleeplock.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/sleeplock.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/sleeplock.o: kernel/sleeplock.c kernel/types.h kernel/riscv.h \
 - kernel/defs.h kernel/param.h kernel/memlayout.h kernel/spinlock.h \
 - kernel/proc.h kernel/sleeplock.h
-Binary files xv6-riscv/kernel/sleeplock.o and xv6-riscv_modified/kernel/sleeplock.o differ
-diff -ruN xv6-riscv/kernel/spinlock.d xv6-riscv_modified/kernel/spinlock.d
+Binary files xv6-riscv/kernel/sleeplock.o and xv6-riscv_Modified/kernel/sleeplock.o differ
+diff -ruN xv6-riscv/kernel/spinlock.d xv6-riscv_Modified/kernel/spinlock.d
 --- xv6-riscv/kernel/spinlock.d	2025-09-12 05:01:34.000000000 +0530
-+++ xv6-riscv_modified/kernel/spinlock.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/spinlock.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/spinlock.o: kernel/spinlock.c kernel/types.h kernel/param.h \
 - kernel/memlayout.h kernel/spinlock.h kernel/riscv.h kernel/proc.h \
 - kernel/defs.h
-Binary files xv6-riscv/kernel/spinlock.o and xv6-riscv_modified/kernel/spinlock.o differ
-diff -ruN xv6-riscv/kernel/start.d xv6-riscv_modified/kernel/start.d
+Binary files xv6-riscv/kernel/spinlock.o and xv6-riscv_Modified/kernel/spinlock.o differ
+diff -ruN xv6-riscv/kernel/start.d xv6-riscv_Modified/kernel/start.d
 --- xv6-riscv/kernel/start.d	2025-09-12 05:01:33.000000000 +0530
-+++ xv6-riscv_modified/kernel/start.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/start.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -kernel/start.o: kernel/start.c kernel/types.h kernel/param.h \
 - kernel/memlayout.h kernel/riscv.h kernel/defs.h
-Binary files xv6-riscv/kernel/start.o and xv6-riscv_modified/kernel/start.o differ
-diff -ruN xv6-riscv/kernel/string.d xv6-riscv_modified/kernel/string.d
+Binary files xv6-riscv/kernel/start.o and xv6-riscv_Modified/kernel/start.o differ
+diff -ruN xv6-riscv/kernel/string.d xv6-riscv_Modified/kernel/string.d
 --- xv6-riscv/kernel/string.d	2025-09-12 05:01:34.000000000 +0530
-+++ xv6-riscv_modified/kernel/string.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/string.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1 +0,0 @@
 -kernel/string.o: kernel/string.c kernel/types.h
-Binary files xv6-riscv/kernel/string.o and xv6-riscv_modified/kernel/string.o differ
-Binary files xv6-riscv/kernel/swtch.o and xv6-riscv_modified/kernel/swtch.o differ
-diff -ruN xv6-riscv/kernel/syscall.c xv6-riscv_modified/kernel/syscall.c
+Binary files xv6-riscv/kernel/string.o and xv6-riscv_Modified/kernel/string.o differ
+Binary files xv6-riscv/kernel/swtch.o and xv6-riscv_Modified/kernel/swtch.o differ
+diff -ruN xv6-riscv/kernel/syscall.c xv6-riscv_Modified/kernel/syscall.c
 --- xv6-riscv/kernel/syscall.c	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/kernel/syscall.c	2025-09-12 21:15:18.000000000 +0530
++++ xv6-riscv_Modified/kernel/syscall.c	2025-09-13 13:55:48.015113882 +0530
 @@ -101,6 +101,7 @@
  extern uint64 sys_link(void);
  extern uint64 sys_mkdir(void);
@@ -13728,26 +14410,26 @@ diff -ruN xv6-riscv/kernel/syscall.c xv6-riscv_modified/kernel/syscall.c
  };
  
  void
-diff -ruN xv6-riscv/kernel/syscall.d xv6-riscv_modified/kernel/syscall.d
+diff -ruN xv6-riscv/kernel/syscall.d xv6-riscv_Modified/kernel/syscall.d
 --- xv6-riscv/kernel/syscall.d	2025-09-12 05:01:34.000000000 +0530
-+++ xv6-riscv_modified/kernel/syscall.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/syscall.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/syscall.o: kernel/syscall.c kernel/types.h kernel/param.h \
 - kernel/memlayout.h kernel/riscv.h kernel/spinlock.h kernel/proc.h \
 - kernel/syscall.h kernel/defs.h
-diff -ruN xv6-riscv/kernel/syscall.h xv6-riscv_modified/kernel/syscall.h
+diff -ruN xv6-riscv/kernel/syscall.h xv6-riscv_Modified/kernel/syscall.h
 --- xv6-riscv/kernel/syscall.h	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/kernel/syscall.h	2025-09-12 21:15:18.000000000 +0530
++++ xv6-riscv_Modified/kernel/syscall.h	2025-09-13 13:56:03.473953238 +0530
 @@ -20,3 +20,4 @@
  #define SYS_link   19
  #define SYS_mkdir  20
  #define SYS_close  21
 +#define SYS_getreadcount 22
 \ No newline at end of file
-Binary files xv6-riscv/kernel/syscall.o and xv6-riscv_modified/kernel/syscall.o differ
-diff -ruN xv6-riscv/kernel/sysfile.c xv6-riscv_modified/kernel/sysfile.c
+Binary files xv6-riscv/kernel/syscall.o and xv6-riscv_Modified/kernel/syscall.o differ
+diff -ruN xv6-riscv/kernel/sysfile.c xv6-riscv_Modified/kernel/sysfile.c
 --- xv6-riscv/kernel/sysfile.c	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/kernel/sysfile.c	2025-09-12 21:20:13.000000000 +0530
++++ xv6-riscv_Modified/kernel/sysfile.c	2025-09-13 13:56:27.556168421 +0530
 @@ -16,6 +16,7 @@
  #include "file.h"
  #include "fcntl.h"
@@ -13777,18 +14459,18 @@ diff -ruN xv6-riscv/kernel/sysfile.c xv6-riscv_modified/kernel/sysfile.c
  }
  
  uint64
-diff -ruN xv6-riscv/kernel/sysfile.d xv6-riscv_modified/kernel/sysfile.d
+diff -ruN xv6-riscv/kernel/sysfile.d xv6-riscv_Modified/kernel/sysfile.d
 --- xv6-riscv/kernel/sysfile.d	2025-09-12 05:01:35.000000000 +0530
-+++ xv6-riscv_modified/kernel/sysfile.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/sysfile.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,4 +0,0 @@
 -kernel/sysfile.o: kernel/sysfile.c kernel/types.h kernel/riscv.h \
 - kernel/defs.h kernel/param.h kernel/stat.h kernel/spinlock.h \
 - kernel/proc.h kernel/fs.h kernel/sleeplock.h kernel/file.h \
 - kernel/fcntl.h
-Binary files xv6-riscv/kernel/sysfile.o and xv6-riscv_modified/kernel/sysfile.o differ
-diff -ruN xv6-riscv/kernel/sysproc.c xv6-riscv_modified/kernel/sysproc.c
+Binary files xv6-riscv/kernel/sysfile.o and xv6-riscv_Modified/kernel/sysfile.o differ
+diff -ruN xv6-riscv/kernel/sysproc.c xv6-riscv_Modified/kernel/sysproc.c
 --- xv6-riscv/kernel/sysproc.c	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/kernel/sysproc.c	2025-09-12 21:20:22.000000000 +0530
++++ xv6-riscv_Modified/kernel/sysproc.c	2025-09-13 13:56:45.788230966 +0530
 @@ -7,6 +7,9 @@
  #include "proc.h"
  #include "vm.h"
@@ -13809,18 +14491,18 @@ diff -ruN xv6-riscv/kernel/sysproc.c xv6-riscv_modified/kernel/sysproc.c
 +{
 +  return read_byte_count;
 +}
-diff -ruN xv6-riscv/kernel/sysproc.d xv6-riscv_modified/kernel/sysproc.d
+diff -ruN xv6-riscv/kernel/sysproc.d xv6-riscv_Modified/kernel/sysproc.d
 --- xv6-riscv/kernel/sysproc.d	2025-09-12 05:01:34.000000000 +0530
-+++ xv6-riscv_modified/kernel/sysproc.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/sysproc.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/sysproc.o: kernel/sysproc.c kernel/types.h kernel/riscv.h \
 - kernel/defs.h kernel/param.h kernel/memlayout.h kernel/spinlock.h \
 - kernel/proc.h kernel/vm.h
-Binary files xv6-riscv/kernel/sysproc.o and xv6-riscv_modified/kernel/sysproc.o differ
-Binary files xv6-riscv/kernel/trampoline.o and xv6-riscv_modified/kernel/trampoline.o differ
-diff -ruN xv6-riscv/kernel/trap.c xv6-riscv_modified/kernel/trap.c
+Binary files xv6-riscv/kernel/sysproc.o and xv6-riscv_Modified/kernel/sysproc.o differ
+Binary files xv6-riscv/kernel/trampoline.o and xv6-riscv_Modified/kernel/trampoline.o differ
+diff -ruN xv6-riscv/kernel/trap.c xv6-riscv_Modified/kernel/trap.c
 --- xv6-riscv/kernel/trap.c	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/kernel/trap.c	2025-09-12 21:29:41.000000000 +0530
++++ xv6-riscv_Modified/kernel/trap.c	2025-09-13 13:57:02.367047288 +0530
 @@ -81,8 +81,15 @@
      kexit(-1);
  
@@ -13838,58 +14520,63 @@ diff -ruN xv6-riscv/kernel/trap.c xv6-riscv_modified/kernel/trap.c
  
    prepare_return();
  
-@@ -152,8 +159,15 @@
+@@ -152,8 +159,20 @@
    }
  
    // give up the CPU if this is a timer interrupt.
 -  if(which_dev == 2 && myproc() != 0)
-+  if(which_dev == 2 && myproc() != 0) {
++ if(which_dev == 2 && myproc() != 0) {
 +#ifdef CFS
 +    update_virtual_runtime_on_tick();
 +#elif defined(FCFS)
 +    // FCFS: no preemption
++#elif ACTIVE_SCHEDULER == SCHED_MLFQ
++    myproc()->ticks_used_this_slice++;
++    if (myproc()->ticks_used_this_slice >= myproc()->time_quantum) {
++        yield();
++    }
 +#else
      yield();
 +#endif
-+  }
++}
  
    // the yield() may have caused some traps to occur,
    // so restore trap registers for use by kernelvec.S's sepc instruction.
-diff -ruN xv6-riscv/kernel/trap.d xv6-riscv_modified/kernel/trap.d
+diff -ruN xv6-riscv/kernel/trap.d xv6-riscv_Modified/kernel/trap.d
 --- xv6-riscv/kernel/trap.d	2025-09-12 05:01:34.000000000 +0530
-+++ xv6-riscv_modified/kernel/trap.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/trap.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/trap.o: kernel/trap.c kernel/types.h kernel/param.h \
 - kernel/memlayout.h kernel/riscv.h kernel/spinlock.h kernel/proc.h \
 - kernel/defs.h
-Binary files xv6-riscv/kernel/trap.o and xv6-riscv_modified/kernel/trap.o differ
-diff -ruN xv6-riscv/kernel/uart.d xv6-riscv_modified/kernel/uart.d
+Binary files xv6-riscv/kernel/trap.o and xv6-riscv_Modified/kernel/trap.o differ
+diff -ruN xv6-riscv/kernel/uart.d xv6-riscv_Modified/kernel/uart.d
 --- xv6-riscv/kernel/uart.d	2025-09-12 05:01:34.000000000 +0530
-+++ xv6-riscv_modified/kernel/uart.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/uart.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/uart.o: kernel/uart.c kernel/types.h kernel/param.h \
 - kernel/memlayout.h kernel/riscv.h kernel/spinlock.h kernel/proc.h \
 - kernel/defs.h
-Binary files xv6-riscv/kernel/uart.o and xv6-riscv_modified/kernel/uart.o differ
-diff -ruN xv6-riscv/kernel/virtio_disk.d xv6-riscv_modified/kernel/virtio_disk.d
+Binary files xv6-riscv/kernel/uart.o and xv6-riscv_Modified/kernel/uart.o differ
+diff -ruN xv6-riscv/kernel/virtio_disk.d xv6-riscv_Modified/kernel/virtio_disk.d
 --- xv6-riscv/kernel/virtio_disk.d	2025-09-12 05:01:35.000000000 +0530
-+++ xv6-riscv_modified/kernel/virtio_disk.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/virtio_disk.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/virtio_disk.o: kernel/virtio_disk.c kernel/types.h kernel/riscv.h \
 - kernel/defs.h kernel/param.h kernel/memlayout.h kernel/spinlock.h \
 - kernel/sleeplock.h kernel/fs.h kernel/buf.h kernel/virtio.h
-Binary files xv6-riscv/kernel/virtio_disk.o and xv6-riscv_modified/kernel/virtio_disk.o differ
-diff -ruN xv6-riscv/kernel/vm.d xv6-riscv_modified/kernel/vm.d
+Binary files xv6-riscv/kernel/virtio_disk.o and xv6-riscv_Modified/kernel/virtio_disk.o differ
+diff -ruN xv6-riscv/kernel/vm.d xv6-riscv_Modified/kernel/vm.d
 --- xv6-riscv/kernel/vm.d	2025-09-12 05:01:34.000000000 +0530
-+++ xv6-riscv_modified/kernel/vm.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/kernel/vm.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -kernel/vm.o: kernel/vm.c kernel/param.h kernel/types.h kernel/memlayout.h \
 - kernel/elf.h kernel/riscv.h kernel/defs.h kernel/spinlock.h \
 - kernel/proc.h kernel/fs.h
-Binary files xv6-riscv/kernel/vm.o and xv6-riscv_modified/kernel/vm.o differ
-diff -ruN xv6-riscv/Makefile xv6-riscv_modified/Makefile
+Binary files xv6-riscv/kernel/vm.o and xv6-riscv_Modified/kernel/vm.o differ
+diff -ruN xv6-riscv/Makefile xv6-riscv_Modified/Makefile
 --- xv6-riscv/Makefile	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/Makefile	2025-09-12 21:15:17.000000000 +0530
++++ xv6-riscv_Modified/Makefile	2025-09-13 13:59:20.714473906 +0530
 @@ -73,6 +73,11 @@
  CFLAGS += -I.
  CFLAGS += $(shell $(CC) -fno-stack-protector -E -x c /dev/null >/dev/null 2>&1 && echo -fno-stack-protector)
@@ -13935,11 +14622,11 @@ diff -ruN xv6-riscv/Makefile xv6-riscv_modified/Makefile
  QEMU_VERSION := $(shell $(QEMU) --version | head -n 1 | sed -E 's/^QEMU emulator version ([0-9]+\.[0-9]+)\..*/\1/')
  check-qemu-version:
  	@if [ "$(shell echo "$(QEMU_VERSION) >= $(MIN_QEMU_VERSION)" | bc)" -eq 0 ]; then \
-Binary files xv6-riscv/mkfs/mkfs and xv6-riscv_modified/mkfs/mkfs differ
-Binary files xv6-riscv/user/_cat and xv6-riscv_modified/user/_cat differ
-diff -ruN xv6-riscv/user/cat.asm xv6-riscv_modified/user/cat.asm
+Binary files xv6-riscv/mkfs/mkfs and xv6-riscv_Modified/mkfs/mkfs differ
+Binary files xv6-riscv/user/_cat and xv6-riscv_Modified/user/_cat differ
+diff -ruN xv6-riscv/user/cat.asm xv6-riscv_Modified/user/cat.asm
 --- xv6-riscv/user/cat.asm	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/cat.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/cat.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1580 +0,0 @@
 -
 -user/_cat:     file format elf64-littleriscv
@@ -15521,15 +16208,15 @@ diff -ruN xv6-riscv/user/cat.asm xv6-riscv_modified/user/cat.asm
 - 94c:	6aa2                	ld	s5,8(sp)
 - 94e:	6b02                	ld	s6,0(sp)
 - 950:	b7f5                	j	93c <malloc+0xe2>
-diff -ruN xv6-riscv/user/cat.d xv6-riscv_modified/user/cat.d
+diff -ruN xv6-riscv/user/cat.d xv6-riscv_Modified/user/cat.d
 --- xv6-riscv/user/cat.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/cat.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/cat.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1 +0,0 @@
 -user/cat.o: user/cat.c kernel/types.h kernel/fcntl.h user/user.h
-Binary files xv6-riscv/user/cat.o and xv6-riscv_modified/user/cat.o differ
-diff -ruN xv6-riscv/user/cat.sym xv6-riscv_modified/user/cat.sym
+Binary files xv6-riscv/user/cat.o and xv6-riscv_Modified/user/cat.o differ
+diff -ruN xv6-riscv/user/cat.sym xv6-riscv_Modified/user/cat.sym
 --- xv6-riscv/user/cat.sym	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/cat.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/cat.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,67 +0,0 @@
 -0000000000000000 .text
 -0000000000000958 .rodata
@@ -15598,10 +16285,10 @@ diff -ruN xv6-riscv/user/cat.sym xv6-riscv_modified/user/cat.sym
 -00000000000003e6 mkdir
 -00000000000003a6 close
 -00000000000007d8 free
-Binary files xv6-riscv/user/_dorphan and xv6-riscv_modified/user/_dorphan differ
-diff -ruN xv6-riscv/user/dorphan.asm xv6-riscv_modified/user/dorphan.asm
+Binary files xv6-riscv/user/_dorphan and xv6-riscv_Modified/user/_dorphan differ
+diff -ruN xv6-riscv/user/dorphan.asm xv6-riscv_Modified/user/dorphan.asm
 --- xv6-riscv/user/dorphan.asm	2025-09-12 05:01:38.000000000 +0530
-+++ xv6-riscv_modified/user/dorphan.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/dorphan.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1519 +0,0 @@
 -
 -user/_dorphan:     file format elf64-littleriscv
@@ -17122,16 +17809,16 @@ diff -ruN xv6-riscv/user/dorphan.asm xv6-riscv_modified/user/dorphan.asm
 - 8ec:	6aa2                	ld	s5,8(sp)
 - 8ee:	6b02                	ld	s6,0(sp)
 - 8f0:	b7f5                	j	8dc <malloc+0xe2>
-diff -ruN xv6-riscv/user/dorphan.d xv6-riscv_modified/user/dorphan.d
+diff -ruN xv6-riscv/user/dorphan.d xv6-riscv_Modified/user/dorphan.d
 --- xv6-riscv/user/dorphan.d	2025-09-12 05:01:38.000000000 +0530
-+++ xv6-riscv_modified/user/dorphan.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/dorphan.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -user/dorphan.o: user/dorphan.c kernel/types.h kernel/stat.h \
 - kernel/fcntl.h user/user.h
-Binary files xv6-riscv/user/dorphan.o and xv6-riscv_modified/user/dorphan.o differ
-diff -ruN xv6-riscv/user/dorphan.sym xv6-riscv_modified/user/dorphan.sym
+Binary files xv6-riscv/user/dorphan.o and xv6-riscv_Modified/user/dorphan.o differ
+diff -ruN xv6-riscv/user/dorphan.sym xv6-riscv_Modified/user/dorphan.sym
 --- xv6-riscv/user/dorphan.sym	2025-09-12 05:01:38.000000000 +0530
-+++ xv6-riscv_modified/user/dorphan.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/dorphan.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,66 +0,0 @@
 -0000000000000000 .text
 -00000000000008f8 .rodata
@@ -17199,10 +17886,10 @@ diff -ruN xv6-riscv/user/dorphan.sym xv6-riscv_modified/user/dorphan.sym
 -0000000000000386 mkdir
 -0000000000000346 close
 -0000000000000778 free
-Binary files xv6-riscv/user/_echo and xv6-riscv_modified/user/_echo differ
-diff -ruN xv6-riscv/user/echo.asm xv6-riscv_modified/user/echo.asm
+Binary files xv6-riscv/user/_echo and xv6-riscv_Modified/user/_echo differ
+diff -ruN xv6-riscv/user/echo.asm xv6-riscv_Modified/user/echo.asm
 --- xv6-riscv/user/echo.asm	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/echo.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/echo.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1512 +0,0 @@
 -
 -user/_echo:     file format elf64-littleriscv
@@ -18716,15 +19403,15 @@ diff -ruN xv6-riscv/user/echo.asm xv6-riscv_modified/user/echo.asm
 - 8dc:	6aa2                	ld	s5,8(sp)
 - 8de:	6b02                	ld	s6,0(sp)
 - 8e0:	b7f5                	j	8cc <malloc+0xe2>
-diff -ruN xv6-riscv/user/echo.d xv6-riscv_modified/user/echo.d
+diff -ruN xv6-riscv/user/echo.d xv6-riscv_Modified/user/echo.d
 --- xv6-riscv/user/echo.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/echo.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/echo.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1 +0,0 @@
 -user/echo.o: user/echo.c kernel/types.h kernel/stat.h user/user.h
-Binary files xv6-riscv/user/echo.o and xv6-riscv_modified/user/echo.o differ
-diff -ruN xv6-riscv/user/echo.sym xv6-riscv_modified/user/echo.sym
+Binary files xv6-riscv/user/echo.o and xv6-riscv_Modified/user/echo.o differ
+diff -ruN xv6-riscv/user/echo.sym xv6-riscv_Modified/user/echo.sym
 --- xv6-riscv/user/echo.sym	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/echo.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/echo.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,65 +0,0 @@
 -0000000000000000 .text
 -00000000000008e8 .rodata
@@ -18791,10 +19478,10 @@ diff -ruN xv6-riscv/user/echo.sym xv6-riscv_modified/user/echo.sym
 -0000000000000376 mkdir
 -0000000000000336 close
 -0000000000000768 free
-Binary files xv6-riscv/user/_forktest and xv6-riscv_modified/user/_forktest differ
-diff -ruN xv6-riscv/user/forktest.asm xv6-riscv_modified/user/forktest.asm
+Binary files xv6-riscv/user/_forktest and xv6-riscv_Modified/user/_forktest differ
+diff -ruN xv6-riscv/user/forktest.asm xv6-riscv_Modified/user/forktest.asm
 --- xv6-riscv/user/forktest.asm	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/forktest.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/forktest.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,817 +0,0 @@
 -
 -user/_forktest:     file format elf64-littleriscv
@@ -19613,16 +20300,16 @@ diff -ruN xv6-riscv/user/forktest.asm xv6-riscv_modified/user/forktest.asm
 - 404:	00000073          	ecall
 - ret
 - 408:	8082                	ret
-diff -ruN xv6-riscv/user/forktest.d xv6-riscv_modified/user/forktest.d
+diff -ruN xv6-riscv/user/forktest.d xv6-riscv_Modified/user/forktest.d
 --- xv6-riscv/user/forktest.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/forktest.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/forktest.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1 +0,0 @@
 -user/forktest.o: user/forktest.c kernel/types.h kernel/stat.h user/user.h
-Binary files xv6-riscv/user/forktest.o and xv6-riscv_modified/user/forktest.o differ
-Binary files xv6-riscv/user/_forphan and xv6-riscv_modified/user/_forphan differ
-diff -ruN xv6-riscv/user/forphan.asm xv6-riscv_modified/user/forphan.asm
+Binary files xv6-riscv/user/forktest.o and xv6-riscv_Modified/user/forktest.o differ
+Binary files xv6-riscv/user/_forphan and xv6-riscv_Modified/user/_forphan differ
+diff -ruN xv6-riscv/user/forphan.asm xv6-riscv_Modified/user/forphan.asm
 --- xv6-riscv/user/forphan.asm	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/forphan.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/forphan.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1544 +0,0 @@
 -
 -user/_forphan:     file format elf64-littleriscv
@@ -21168,16 +21855,16 @@ diff -ruN xv6-riscv/user/forphan.asm xv6-riscv_modified/user/forphan.asm
 - 926:	6aa2                	ld	s5,8(sp)
 - 928:	6b02                	ld	s6,0(sp)
 - 92a:	b7f5                	j	916 <malloc+0xe2>
-diff -ruN xv6-riscv/user/forphan.d xv6-riscv_modified/user/forphan.d
+diff -ruN xv6-riscv/user/forphan.d xv6-riscv_Modified/user/forphan.d
 --- xv6-riscv/user/forphan.d	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/forphan.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/forphan.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -user/forphan.o: user/forphan.c kernel/types.h kernel/stat.h \
 - kernel/fcntl.h user/user.h
-Binary files xv6-riscv/user/forphan.o and xv6-riscv_modified/user/forphan.o differ
-diff -ruN xv6-riscv/user/forphan.sym xv6-riscv_modified/user/forphan.sym
+Binary files xv6-riscv/user/forphan.o and xv6-riscv_Modified/user/forphan.o differ
+diff -ruN xv6-riscv/user/forphan.sym xv6-riscv_Modified/user/forphan.sym
 --- xv6-riscv/user/forphan.sym	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/forphan.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/forphan.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,66 +0,0 @@
 -0000000000000000 .text
 -0000000000000930 .rodata
@@ -21245,10 +21932,10 @@ diff -ruN xv6-riscv/user/forphan.sym xv6-riscv_modified/user/forphan.sym
 -00000000000003c0 mkdir
 -0000000000000380 close
 -00000000000007b2 free
-Binary files xv6-riscv/user/_grep and xv6-riscv_modified/user/_grep differ
-diff -ruN xv6-riscv/user/grep.asm xv6-riscv_modified/user/grep.asm
+Binary files xv6-riscv/user/_grep and xv6-riscv_Modified/user/_grep differ
+diff -ruN xv6-riscv/user/grep.asm xv6-riscv_Modified/user/grep.asm
 --- xv6-riscv/user/grep.asm	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/grep.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/grep.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1754 +0,0 @@
 -
 -user/_grep:     file format elf64-littleriscv
@@ -23004,16 +23691,16 @@ diff -ruN xv6-riscv/user/grep.asm xv6-riscv_modified/user/grep.asm
 - abc:	6aa2                	ld	s5,8(sp)
 - abe:	6b02                	ld	s6,0(sp)
 - ac0:	b7f5                	j	aac <malloc+0xe2>
-diff -ruN xv6-riscv/user/grep.d xv6-riscv_modified/user/grep.d
+diff -ruN xv6-riscv/user/grep.d xv6-riscv_Modified/user/grep.d
 --- xv6-riscv/user/grep.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/grep.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/grep.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -user/grep.o: user/grep.c kernel/types.h kernel/stat.h kernel/fcntl.h \
 - user/user.h
-Binary files xv6-riscv/user/grep.o and xv6-riscv_modified/user/grep.o differ
-diff -ruN xv6-riscv/user/grep.sym xv6-riscv_modified/user/grep.sym
+Binary files xv6-riscv/user/grep.o and xv6-riscv_Modified/user/grep.o differ
+diff -ruN xv6-riscv/user/grep.sym xv6-riscv_Modified/user/grep.sym
 --- xv6-riscv/user/grep.sym	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/grep.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/grep.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,70 +0,0 @@
 -0000000000000000 .text
 -0000000000000ac8 .rodata
@@ -23085,10 +23772,10 @@ diff -ruN xv6-riscv/user/grep.sym xv6-riscv_modified/user/grep.sym
 -0000000000000556 mkdir
 -0000000000000516 close
 -0000000000000948 free
-Binary files xv6-riscv/user/_grind and xv6-riscv_modified/user/_grind differ
-diff -ruN xv6-riscv/user/grind.asm xv6-riscv_modified/user/grind.asm
+Binary files xv6-riscv/user/_grind and xv6-riscv_Modified/user/_grind differ
+diff -ruN xv6-riscv/user/grind.asm xv6-riscv_Modified/user/grind.asm
 --- xv6-riscv/user/grind.asm	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/grind.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/grind.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2534 +0,0 @@
 -
 -user/_grind:     file format elf64-littleriscv
@@ -25624,17 +26311,17 @@ diff -ruN xv6-riscv/user/grind.asm xv6-riscv_modified/user/grind.asm
 -    1140:	6aa2                	ld	s5,8(sp)
 -    1142:	6b02                	ld	s6,0(sp)
 -    1144:	b7f5                	j	1130 <malloc+0xe2>
-diff -ruN xv6-riscv/user/grind.d xv6-riscv_modified/user/grind.d
+diff -ruN xv6-riscv/user/grind.d xv6-riscv_Modified/user/grind.d
 --- xv6-riscv/user/grind.d	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/grind.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/grind.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -user/grind.o: user/grind.c kernel/param.h kernel/types.h kernel/stat.h \
 - user/user.h kernel/fs.h kernel/fcntl.h kernel/syscall.h \
 - kernel/memlayout.h kernel/riscv.h
-Binary files xv6-riscv/user/grind.o and xv6-riscv_modified/user/grind.o differ
-diff -ruN xv6-riscv/user/grind.sym xv6-riscv_modified/user/grind.sym
+Binary files xv6-riscv/user/grind.o and xv6-riscv_Modified/user/grind.o differ
+diff -ruN xv6-riscv/user/grind.sym xv6-riscv_Modified/user/grind.sym
 --- xv6-riscv/user/grind.sym	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/grind.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/grind.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,71 +0,0 @@
 -0000000000000000 .text
 -0000000000001148 .rodata
@@ -25707,10 +26394,10 @@ diff -ruN xv6-riscv/user/grind.sym xv6-riscv_modified/user/grind.sym
 -0000000000000bda mkdir
 -0000000000000b9a close
 -0000000000000fcc free
-Binary files xv6-riscv/user/_init and xv6-riscv_modified/user/_init differ
-diff -ruN xv6-riscv/user/init.asm xv6-riscv_modified/user/init.asm
+Binary files xv6-riscv/user/_init and xv6-riscv_Modified/user/_init differ
+diff -ruN xv6-riscv/user/init.asm xv6-riscv_Modified/user/init.asm
 --- xv6-riscv/user/init.asm	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/init.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/init.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1549 +0,0 @@
 -
 -user/_init:     file format elf64-littleriscv
@@ -27261,16 +27948,16 @@ diff -ruN xv6-riscv/user/init.asm xv6-riscv_modified/user/init.asm
 - 91e:	6aa2                	ld	s5,8(sp)
 - 920:	6b02                	ld	s6,0(sp)
 - 922:	b7f5                	j	90e <malloc+0xe2>
-diff -ruN xv6-riscv/user/init.d xv6-riscv_modified/user/init.d
+diff -ruN xv6-riscv/user/init.d xv6-riscv_Modified/user/init.d
 --- xv6-riscv/user/init.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/init.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/init.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -user/init.o: user/init.c kernel/types.h kernel/stat.h kernel/spinlock.h \
 - kernel/sleeplock.h kernel/fs.h kernel/file.h user/user.h kernel/fcntl.h
-Binary files xv6-riscv/user/init.o and xv6-riscv_modified/user/init.o differ
-diff -ruN xv6-riscv/user/init.sym xv6-riscv_modified/user/init.sym
+Binary files xv6-riscv/user/init.o and xv6-riscv_Modified/user/init.o differ
+diff -ruN xv6-riscv/user/init.sym xv6-riscv_Modified/user/init.sym
 --- xv6-riscv/user/init.sym	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/init.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/init.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,66 +0,0 @@
 -0000000000000000 .text
 -0000000000000928 .rodata
@@ -27338,10 +28025,10 @@ diff -ruN xv6-riscv/user/init.sym xv6-riscv_modified/user/init.sym
 -00000000000003b8 mkdir
 -0000000000000378 close
 -00000000000007aa free
-Binary files xv6-riscv/user/_kill and xv6-riscv_modified/user/_kill differ
-diff -ruN xv6-riscv/user/kill.asm xv6-riscv_modified/user/kill.asm
+Binary files xv6-riscv/user/_kill and xv6-riscv_Modified/user/_kill differ
+diff -ruN xv6-riscv/user/kill.asm xv6-riscv_Modified/user/kill.asm
 --- xv6-riscv/user/kill.asm	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/kill.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/kill.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1497 +0,0 @@
 -
 -user/_kill:     file format elf64-littleriscv
@@ -28840,15 +29527,15 @@ diff -ruN xv6-riscv/user/kill.asm xv6-riscv_modified/user/kill.asm
 - 8b6:	6aa2                	ld	s5,8(sp)
 - 8b8:	6b02                	ld	s6,0(sp)
 - 8ba:	b7f5                	j	8a6 <malloc+0xe2>
-diff -ruN xv6-riscv/user/kill.d xv6-riscv_modified/user/kill.d
+diff -ruN xv6-riscv/user/kill.d xv6-riscv_Modified/user/kill.d
 --- xv6-riscv/user/kill.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/kill.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/kill.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1 +0,0 @@
 -user/kill.o: user/kill.c kernel/types.h kernel/stat.h user/user.h
-Binary files xv6-riscv/user/kill.o and xv6-riscv_modified/user/kill.o differ
-diff -ruN xv6-riscv/user/kill.sym xv6-riscv_modified/user/kill.sym
+Binary files xv6-riscv/user/kill.o and xv6-riscv_Modified/user/kill.o differ
+diff -ruN xv6-riscv/user/kill.sym xv6-riscv_Modified/user/kill.sym
 --- xv6-riscv/user/kill.sym	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/kill.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/kill.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,65 +0,0 @@
 -0000000000000000 .text
 -00000000000008c0 .rodata
@@ -28915,10 +29602,10 @@ diff -ruN xv6-riscv/user/kill.sym xv6-riscv_modified/user/kill.sym
 -0000000000000350 mkdir
 -0000000000000310 close
 -0000000000000742 free
-Binary files xv6-riscv/user/_ln and xv6-riscv_modified/user/_ln differ
-diff -ruN xv6-riscv/user/ln.asm xv6-riscv_modified/user/ln.asm
+Binary files xv6-riscv/user/_ln and xv6-riscv_Modified/user/_ln differ
+diff -ruN xv6-riscv/user/ln.asm xv6-riscv_Modified/user/ln.asm
 --- xv6-riscv/user/ln.asm	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/ln.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/ln.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1492 +0,0 @@
 -
 -user/_ln:     file format elf64-littleriscv
@@ -30412,15 +31099,15 @@ diff -ruN xv6-riscv/user/ln.asm xv6-riscv_modified/user/ln.asm
 - 8b0:	6aa2                	ld	s5,8(sp)
 - 8b2:	6b02                	ld	s6,0(sp)
 - 8b4:	b7f5                	j	8a0 <malloc+0xe2>
-diff -ruN xv6-riscv/user/ln.d xv6-riscv_modified/user/ln.d
+diff -ruN xv6-riscv/user/ln.d xv6-riscv_Modified/user/ln.d
 --- xv6-riscv/user/ln.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/ln.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/ln.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1 +0,0 @@
 -user/ln.o: user/ln.c kernel/types.h kernel/stat.h user/user.h
-Binary files xv6-riscv/user/ln.o and xv6-riscv_modified/user/ln.o differ
-diff -ruN xv6-riscv/user/ln.sym xv6-riscv_modified/user/ln.sym
+Binary files xv6-riscv/user/ln.o and xv6-riscv_Modified/user/ln.o differ
+diff -ruN xv6-riscv/user/ln.sym xv6-riscv_Modified/user/ln.sym
 --- xv6-riscv/user/ln.sym	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/ln.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/ln.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,65 +0,0 @@
 -0000000000000000 .text
 -00000000000008b8 .rodata
@@ -30487,10 +31174,10 @@ diff -ruN xv6-riscv/user/ln.sym xv6-riscv_modified/user/ln.sym
 -000000000000034a mkdir
 -000000000000030a close
 -000000000000073c free
-Binary files xv6-riscv/user/_logstress and xv6-riscv_modified/user/_logstress differ
-diff -ruN xv6-riscv/user/logstress.asm xv6-riscv_modified/user/logstress.asm
+Binary files xv6-riscv/user/_logstress and xv6-riscv_Modified/user/_logstress differ
+diff -ruN xv6-riscv/user/logstress.asm xv6-riscv_Modified/user/logstress.asm
 --- xv6-riscv/user/logstress.asm	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/logstress.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/logstress.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1578 +0,0 @@
 -
 -user/_logstress:     file format elf64-littleriscv
@@ -32070,16 +32757,16 @@ diff -ruN xv6-riscv/user/logstress.asm xv6-riscv_modified/user/logstress.asm
 - 966:	6aa2                	ld	s5,8(sp)
 - 968:	6b02                	ld	s6,0(sp)
 - 96a:	b7f5                	j	956 <malloc+0xe2>
-diff -ruN xv6-riscv/user/logstress.d xv6-riscv_modified/user/logstress.d
+diff -ruN xv6-riscv/user/logstress.d xv6-riscv_Modified/user/logstress.d
 --- xv6-riscv/user/logstress.d	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/logstress.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/logstress.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -user/logstress.o: user/logstress.c kernel/types.h kernel/stat.h \
 - kernel/fcntl.h user/user.h
-Binary files xv6-riscv/user/logstress.o and xv6-riscv_modified/user/logstress.o differ
-diff -ruN xv6-riscv/user/logstress.sym xv6-riscv_modified/user/logstress.sym
+Binary files xv6-riscv/user/logstress.o and xv6-riscv_Modified/user/logstress.o differ
+diff -ruN xv6-riscv/user/logstress.sym xv6-riscv_Modified/user/logstress.sym
 --- xv6-riscv/user/logstress.sym	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/logstress.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/logstress.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,66 +0,0 @@
 -0000000000000000 .text
 -0000000000000970 .rodata
@@ -32147,10 +32834,10 @@ diff -ruN xv6-riscv/user/logstress.sym xv6-riscv_modified/user/logstress.sym
 -0000000000000400 mkdir
 -00000000000003c0 close
 -00000000000007f2 free
-Binary files xv6-riscv/user/_ls and xv6-riscv_modified/user/_ls differ
-diff -ruN xv6-riscv/user/ls.asm xv6-riscv_modified/user/ls.asm
+Binary files xv6-riscv/user/_ls and xv6-riscv_Modified/user/_ls differ
+diff -ruN xv6-riscv/user/ls.asm xv6-riscv_Modified/user/ls.asm
 --- xv6-riscv/user/ls.asm	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/ls.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/ls.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1745 +0,0 @@
 -
 -user/_ls:     file format elf64-littleriscv
@@ -33897,16 +34584,16 @@ diff -ruN xv6-riscv/user/ls.asm xv6-riscv_modified/user/ls.asm
 - ace:	6aa2                	ld	s5,8(sp)
 - ad0:	6b02                	ld	s6,0(sp)
 - ad2:	b7f5                	j	abe <malloc+0xe2>
-diff -ruN xv6-riscv/user/ls.d xv6-riscv_modified/user/ls.d
+diff -ruN xv6-riscv/user/ls.d xv6-riscv_Modified/user/ls.d
 --- xv6-riscv/user/ls.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/ls.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/ls.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -user/ls.o: user/ls.c kernel/types.h kernel/stat.h user/user.h kernel/fs.h \
 - kernel/fcntl.h
-Binary files xv6-riscv/user/ls.o and xv6-riscv_modified/user/ls.o differ
-diff -ruN xv6-riscv/user/ls.sym xv6-riscv_modified/user/ls.sym
+Binary files xv6-riscv/user/ls.o and xv6-riscv_Modified/user/ls.o differ
+diff -ruN xv6-riscv/user/ls.sym xv6-riscv_Modified/user/ls.sym
 --- xv6-riscv/user/ls.sym	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/ls.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/ls.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,68 +0,0 @@
 -0000000000000000 .text
 -0000000000000ad8 .rodata
@@ -33976,10 +34663,10 @@ diff -ruN xv6-riscv/user/ls.sym xv6-riscv_modified/user/ls.sym
 -0000000000000568 mkdir
 -0000000000000528 close
 -000000000000095a free
-Binary files xv6-riscv/user/_mkdir and xv6-riscv_modified/user/_mkdir differ
-diff -ruN xv6-riscv/user/mkdir.asm xv6-riscv_modified/user/mkdir.asm
+Binary files xv6-riscv/user/_mkdir and xv6-riscv_Modified/user/_mkdir differ
+diff -ruN xv6-riscv/user/mkdir.asm xv6-riscv_Modified/user/mkdir.asm
 --- xv6-riscv/user/mkdir.asm	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/mkdir.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/mkdir.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1509 +0,0 @@
 -
 -user/_mkdir:     file format elf64-littleriscv
@@ -35490,15 +36177,15 @@ diff -ruN xv6-riscv/user/mkdir.asm xv6-riscv_modified/user/mkdir.asm
 - 8c8:	6aa2                	ld	s5,8(sp)
 - 8ca:	6b02                	ld	s6,0(sp)
 - 8cc:	b7f5                	j	8b8 <malloc+0xe2>
-diff -ruN xv6-riscv/user/mkdir.d xv6-riscv_modified/user/mkdir.d
+diff -ruN xv6-riscv/user/mkdir.d xv6-riscv_Modified/user/mkdir.d
 --- xv6-riscv/user/mkdir.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/mkdir.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/mkdir.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1 +0,0 @@
 -user/mkdir.o: user/mkdir.c kernel/types.h kernel/stat.h user/user.h
-Binary files xv6-riscv/user/mkdir.o and xv6-riscv_modified/user/mkdir.o differ
-diff -ruN xv6-riscv/user/mkdir.sym xv6-riscv_modified/user/mkdir.sym
+Binary files xv6-riscv/user/mkdir.o and xv6-riscv_Modified/user/mkdir.o differ
+diff -ruN xv6-riscv/user/mkdir.sym xv6-riscv_Modified/user/mkdir.sym
 --- xv6-riscv/user/mkdir.sym	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/mkdir.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/mkdir.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,65 +0,0 @@
 -0000000000000000 .text
 -00000000000008d0 .rodata
@@ -35565,16 +36252,16 @@ diff -ruN xv6-riscv/user/mkdir.sym xv6-riscv_modified/user/mkdir.sym
 -0000000000000362 mkdir
 -0000000000000322 close
 -0000000000000754 free
-diff -ruN xv6-riscv/user/printf.d xv6-riscv_modified/user/printf.d
+diff -ruN xv6-riscv/user/printf.d xv6-riscv_Modified/user/printf.d
 --- xv6-riscv/user/printf.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/printf.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/printf.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -user/printf.o: user/printf.c kernel/types.h kernel/stat.h user/user.h \
 - /usr/lib/gcc-cross/riscv64-linux-gnu/13/include/stdarg.h
-Binary files xv6-riscv/user/printf.o and xv6-riscv_modified/user/printf.o differ
-diff -ruN xv6-riscv/user/readcount.c xv6-riscv_modified/user/readcount.c
+Binary files xv6-riscv/user/printf.o and xv6-riscv_Modified/user/printf.o differ
+diff -ruN xv6-riscv/user/readcount.c xv6-riscv_Modified/user/readcount.c
 --- xv6-riscv/user/readcount.c	1970-01-01 05:30:00.000000000 +0530
-+++ xv6-riscv_modified/user/readcount.c	2025-09-12 21:21:23.000000000 +0530
++++ xv6-riscv_Modified/user/readcount.c	2025-09-13 13:57:39.902531333 +0530
 @@ -0,0 +1,24 @@
 +#include "kernel/types.h"
 +#include "kernel/stat.h"
@@ -35600,10 +36287,10 @@ diff -ruN xv6-riscv/user/readcount.c xv6-riscv_modified/user/readcount.c
 +    printf("%d\n", getreadcount());
 +    exit(0);
 +}
-Binary files xv6-riscv/user/_rm and xv6-riscv_modified/user/_rm differ
-diff -ruN xv6-riscv/user/rm.asm xv6-riscv_modified/user/rm.asm
+Binary files xv6-riscv/user/_rm and xv6-riscv_Modified/user/_rm differ
+diff -ruN xv6-riscv/user/rm.asm xv6-riscv_Modified/user/rm.asm
 --- xv6-riscv/user/rm.asm	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/rm.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/rm.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1509 +0,0 @@
 -
 -user/_rm:     file format elf64-littleriscv
@@ -37114,15 +37801,15 @@ diff -ruN xv6-riscv/user/rm.asm xv6-riscv_modified/user/rm.asm
 - 8c8:	6aa2                	ld	s5,8(sp)
 - 8ca:	6b02                	ld	s6,0(sp)
 - 8cc:	b7f5                	j	8b8 <malloc+0xe2>
-diff -ruN xv6-riscv/user/rm.d xv6-riscv_modified/user/rm.d
+diff -ruN xv6-riscv/user/rm.d xv6-riscv_Modified/user/rm.d
 --- xv6-riscv/user/rm.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/rm.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/rm.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1 +0,0 @@
 -user/rm.o: user/rm.c kernel/types.h kernel/stat.h user/user.h
-Binary files xv6-riscv/user/rm.o and xv6-riscv_modified/user/rm.o differ
-diff -ruN xv6-riscv/user/rm.sym xv6-riscv_modified/user/rm.sym
+Binary files xv6-riscv/user/rm.o and xv6-riscv_Modified/user/rm.o differ
+diff -ruN xv6-riscv/user/rm.sym xv6-riscv_Modified/user/rm.sym
 --- xv6-riscv/user/rm.sym	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/rm.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/rm.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,65 +0,0 @@
 -0000000000000000 .text
 -00000000000008d0 .rodata
@@ -37189,9 +37876,9 @@ diff -ruN xv6-riscv/user/rm.sym xv6-riscv_modified/user/rm.sym
 -0000000000000362 mkdir
 -0000000000000322 close
 -0000000000000754 free
-diff -ruN xv6-riscv/user/schedulertest.c xv6-riscv_modified/user/schedulertest.c
+diff -ruN xv6-riscv/user/schedulertest.c xv6-riscv_Modified/user/schedulertest.c
 --- xv6-riscv/user/schedulertest.c	1970-01-01 05:30:00.000000000 +0530
-+++ xv6-riscv_modified/user/schedulertest.c	2025-09-12 21:15:19.000000000 +0530
++++ xv6-riscv_Modified/user/schedulertest.c	2025-09-13 13:57:59.542602624 +0530
 @@ -0,0 +1,63 @@
 +#include "kernel/types.h"
 +#include "kernel/stat.h"
@@ -37256,10 +37943,10 @@ diff -ruN xv6-riscv/user/schedulertest.c xv6-riscv_modified/user/schedulertest.c
 +  printf("Scheduler test finished!\n");
 +  exit(0);
 +}
-Binary files xv6-riscv/user/_sh and xv6-riscv_modified/user/_sh differ
-diff -ruN xv6-riscv/user/sh.asm xv6-riscv_modified/user/sh.asm
+Binary files xv6-riscv/user/_sh and xv6-riscv_Modified/user/_sh differ
+diff -ruN xv6-riscv/user/sh.asm xv6-riscv_Modified/user/sh.asm
 --- xv6-riscv/user/sh.asm	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/sh.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/sh.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2779 +0,0 @@
 -
 -user/_sh:     file format elf64-littleriscv
@@ -40040,15 +40727,15 @@ diff -ruN xv6-riscv/user/sh.asm xv6-riscv_modified/user/sh.asm
 -    11fc:	6aa2                	ld	s5,8(sp)
 -    11fe:	6b02                	ld	s6,0(sp)
 -    1200:	b7f5                	j	11ec <malloc+0xe2>
-diff -ruN xv6-riscv/user/sh.d xv6-riscv_modified/user/sh.d
+diff -ruN xv6-riscv/user/sh.d xv6-riscv_Modified/user/sh.d
 --- xv6-riscv/user/sh.d	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/sh.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/sh.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1 +0,0 @@
 -user/sh.o: user/sh.c kernel/types.h user/user.h kernel/fcntl.h
-Binary files xv6-riscv/user/sh.o and xv6-riscv_modified/user/sh.o differ
-diff -ruN xv6-riscv/user/sh.sym xv6-riscv_modified/user/sh.sym
+Binary files xv6-riscv/user/sh.o and xv6-riscv_Modified/user/sh.o differ
+diff -ruN xv6-riscv/user/sh.sym xv6-riscv_Modified/user/sh.sym
 --- xv6-riscv/user/sh.sym	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/sh.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/sh.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,86 +0,0 @@
 -0000000000000000 .text
 -0000000000001208 .rodata
@@ -40136,10 +40823,10 @@ diff -ruN xv6-riscv/user/sh.sym xv6-riscv_modified/user/sh.sym
 -0000000000000c56 close
 -000000000000029e listcmd
 -0000000000001088 free
-Binary files xv6-riscv/user/_stressfs and xv6-riscv_modified/user/_stressfs differ
-diff -ruN xv6-riscv/user/stressfs.asm xv6-riscv_modified/user/stressfs.asm
+Binary files xv6-riscv/user/_stressfs and xv6-riscv_Modified/user/_stressfs differ
+diff -ruN xv6-riscv/user/stressfs.asm xv6-riscv_Modified/user/stressfs.asm
 --- xv6-riscv/user/stressfs.asm	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/stressfs.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/stressfs.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1554 +0,0 @@
 -
 -user/_stressfs:     file format elf64-littleriscv
@@ -41695,16 +42382,16 @@ diff -ruN xv6-riscv/user/stressfs.asm xv6-riscv_modified/user/stressfs.asm
 - 93a:	6aa2                	ld	s5,8(sp)
 - 93c:	6b02                	ld	s6,0(sp)
 - 93e:	b7f5                	j	92a <malloc+0xe2>
-diff -ruN xv6-riscv/user/stressfs.d xv6-riscv_modified/user/stressfs.d
+diff -ruN xv6-riscv/user/stressfs.d xv6-riscv_Modified/user/stressfs.d
 --- xv6-riscv/user/stressfs.d	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/stressfs.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/stressfs.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -user/stressfs.o: user/stressfs.c kernel/types.h kernel/stat.h user/user.h \
 - kernel/fs.h kernel/fcntl.h
-Binary files xv6-riscv/user/stressfs.o and xv6-riscv_modified/user/stressfs.o differ
-diff -ruN xv6-riscv/user/stressfs.sym xv6-riscv_modified/user/stressfs.sym
+Binary files xv6-riscv/user/stressfs.o and xv6-riscv_Modified/user/stressfs.o differ
+diff -ruN xv6-riscv/user/stressfs.sym xv6-riscv_Modified/user/stressfs.sym
 --- xv6-riscv/user/stressfs.sym	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/stressfs.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/stressfs.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,65 +0,0 @@
 -0000000000000000 .text
 -0000000000000940 .rodata
@@ -41771,23 +42458,23 @@ diff -ruN xv6-riscv/user/stressfs.sym xv6-riscv_modified/user/stressfs.sym
 -00000000000003d4 mkdir
 -0000000000000394 close
 -00000000000007c6 free
-diff -ruN xv6-riscv/user/ulib.d xv6-riscv_modified/user/ulib.d
+diff -ruN xv6-riscv/user/ulib.d xv6-riscv_Modified/user/ulib.d
 --- xv6-riscv/user/ulib.d	2025-09-12 05:01:35.000000000 +0530
-+++ xv6-riscv_modified/user/ulib.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/ulib.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -user/ulib.o: user/ulib.c kernel/types.h kernel/stat.h kernel/fcntl.h \
 - kernel/riscv.h kernel/vm.h user/user.h
-Binary files xv6-riscv/user/ulib.o and xv6-riscv_modified/user/ulib.o differ
-diff -ruN xv6-riscv/user/umalloc.d xv6-riscv_modified/user/umalloc.d
+Binary files xv6-riscv/user/ulib.o and xv6-riscv_Modified/user/ulib.o differ
+diff -ruN xv6-riscv/user/umalloc.d xv6-riscv_Modified/user/umalloc.d
 --- xv6-riscv/user/umalloc.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/umalloc.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/umalloc.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -user/umalloc.o: user/umalloc.c kernel/types.h kernel/stat.h user/user.h \
 - kernel/param.h
-Binary files xv6-riscv/user/umalloc.o and xv6-riscv_modified/user/umalloc.o differ
-diff -ruN xv6-riscv/user/user.h xv6-riscv_modified/user/user.h
+Binary files xv6-riscv/user/umalloc.o and xv6-riscv_Modified/user/umalloc.o differ
+diff -ruN xv6-riscv/user/user.h xv6-riscv_Modified/user/user.h
 --- xv6-riscv/user/user.h	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/user/user.h	2025-09-12 21:15:19.000000000 +0530
++++ xv6-riscv_Modified/user/user.h	2025-09-13 13:58:28.834475208 +0530
 @@ -24,6 +24,7 @@
  char* sys_sbrk(int,int);
  int pause(int);
@@ -41796,10 +42483,10 @@ diff -ruN xv6-riscv/user/user.h xv6-riscv_modified/user/user.h
  
  // ulib.c
  int stat(const char*, struct stat*);
-Binary files xv6-riscv/user/_usertests and xv6-riscv_modified/user/_usertests differ
-diff -ruN xv6-riscv/user/usertests.asm xv6-riscv_modified/user/usertests.asm
+Binary files xv6-riscv/user/_usertests and xv6-riscv_Modified/user/_usertests differ
+diff -ruN xv6-riscv/user/usertests.asm xv6-riscv_Modified/user/usertests.asm
 --- xv6-riscv/user/usertests.asm	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/usertests.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/usertests.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,9804 +0,0 @@
 -
 -user/_usertests:     file format elf64-littleriscv
@@ -51605,17 +52292,17 @@ diff -ruN xv6-riscv/user/usertests.asm xv6-riscv_modified/user/usertests.asm
 -    5252:	6aa2                	ld	s5,8(sp)
 -    5254:	6b02                	ld	s6,0(sp)
 -    5256:	b7f5                	j	5242 <malloc+0xe2>
-diff -ruN xv6-riscv/user/usertests.d xv6-riscv_modified/user/usertests.d
+diff -ruN xv6-riscv/user/usertests.d xv6-riscv_Modified/user/usertests.d
 --- xv6-riscv/user/usertests.d	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/usertests.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/usertests.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,3 +0,0 @@
 -user/usertests.o: user/usertests.c kernel/param.h kernel/types.h \
 - kernel/stat.h user/user.h kernel/fs.h kernel/fcntl.h kernel/syscall.h \
 - kernel/memlayout.h kernel/riscv.h
-Binary files xv6-riscv/user/usertests.o and xv6-riscv_modified/user/usertests.o differ
-diff -ruN xv6-riscv/user/usertests.sym xv6-riscv_modified/user/usertests.sym
+Binary files xv6-riscv/user/usertests.o and xv6-riscv_Modified/user/usertests.o differ
+diff -ruN xv6-riscv/user/usertests.sym xv6-riscv_Modified/user/usertests.sym
 --- xv6-riscv/user/usertests.sym	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/usertests.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/usertests.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,146 +0,0 @@
 -0000000000000000 .text
 -0000000000005258 .rodata
@@ -51763,23 +52450,23 @@ diff -ruN xv6-riscv/user/usertests.sym xv6-riscv_modified/user/usertests.sym
 -0000000000004cac close
 -00000000000017e8 reparent2
 -00000000000050de free
-diff -ruN xv6-riscv/user/usys.d xv6-riscv_modified/user/usys.d
+diff -ruN xv6-riscv/user/usys.d xv6-riscv_Modified/user/usys.d
 --- xv6-riscv/user/usys.d	2025-09-12 05:01:36.000000000 +0530
-+++ xv6-riscv_modified/user/usys.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/usys.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1 +0,0 @@
 -user/usys.o: user/usys.S kernel/syscall.h
-Binary files xv6-riscv/user/usys.o and xv6-riscv_modified/user/usys.o differ
-diff -ruN xv6-riscv/user/usys.pl xv6-riscv_modified/user/usys.pl
+Binary files xv6-riscv/user/usys.o and xv6-riscv_Modified/user/usys.o differ
+diff -ruN xv6-riscv/user/usys.pl xv6-riscv_Modified/user/usys.pl
 --- xv6-riscv/user/usys.pl	2025-09-10 06:50:31.000000000 +0530
-+++ xv6-riscv_modified/user/usys.pl	2025-09-12 21:15:19.000000000 +0530
++++ xv6-riscv_Modified/user/usys.pl	2025-09-13 13:58:53.402951221 +0530
 @@ -42,3 +42,4 @@
  entry("sbrk");
  entry("pause");
  entry("uptime");
 +entry("getreadcount");
-diff -ruN xv6-riscv/user/usys.S xv6-riscv_modified/user/usys.S
+diff -ruN xv6-riscv/user/usys.S xv6-riscv_Modified/user/usys.S
 --- xv6-riscv/user/usys.S	2025-09-12 05:01:35.000000000 +0530
-+++ xv6-riscv_modified/user/usys.S	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/usys.S	1970-01-01 05:30:00.000000000 +0530
 @@ -1,107 +0,0 @@
 -# generated by usys.pl - do not edit
 -#include "kernel/syscall.h"
@@ -51888,10 +52575,10 @@ diff -ruN xv6-riscv/user/usys.S xv6-riscv_modified/user/usys.S
 - li a7, SYS_uptime
 - ecall
 - ret
-Binary files xv6-riscv/user/_wc and xv6-riscv_modified/user/_wc differ
-diff -ruN xv6-riscv/user/wc.asm xv6-riscv_modified/user/wc.asm
+Binary files xv6-riscv/user/_wc and xv6-riscv_Modified/user/_wc differ
+diff -ruN xv6-riscv/user/wc.asm xv6-riscv_Modified/user/wc.asm
 --- xv6-riscv/user/wc.asm	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/wc.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/wc.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1642 +0,0 @@
 -
 -user/_wc:     file format elf64-littleriscv
@@ -53535,16 +54222,16 @@ diff -ruN xv6-riscv/user/wc.asm xv6-riscv_modified/user/wc.asm
 - 9be:	6aa2                	ld	s5,8(sp)
 - 9c0:	6b02                	ld	s6,0(sp)
 - 9c2:	b7f5                	j	9ae <malloc+0xe2>
-diff -ruN xv6-riscv/user/wc.d xv6-riscv_modified/user/wc.d
+diff -ruN xv6-riscv/user/wc.d xv6-riscv_Modified/user/wc.d
 --- xv6-riscv/user/wc.d	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/wc.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/wc.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1,2 +0,0 @@
 -user/wc.o: user/wc.c kernel/types.h kernel/stat.h kernel/fcntl.h \
 - user/user.h
-Binary files xv6-riscv/user/wc.o and xv6-riscv_modified/user/wc.o differ
-diff -ruN xv6-riscv/user/wc.sym xv6-riscv_modified/user/wc.sym
+Binary files xv6-riscv/user/wc.o and xv6-riscv_Modified/user/wc.o differ
+diff -ruN xv6-riscv/user/wc.sym xv6-riscv_Modified/user/wc.sym
 --- xv6-riscv/user/wc.sym	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/wc.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/wc.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,67 +0,0 @@
 -0000000000000000 .text
 -00000000000009c8 .rodata
@@ -53613,10 +54300,10 @@ diff -ruN xv6-riscv/user/wc.sym xv6-riscv_modified/user/wc.sym
 -0000000000000458 mkdir
 -0000000000000418 close
 -000000000000084a free
-Binary files xv6-riscv/user/_zombie and xv6-riscv_modified/user/_zombie differ
-diff -ruN xv6-riscv/user/zombie.asm xv6-riscv_modified/user/zombie.asm
+Binary files xv6-riscv/user/_zombie and xv6-riscv_Modified/user/_zombie differ
+diff -ruN xv6-riscv/user/zombie.asm xv6-riscv_Modified/user/zombie.asm
 --- xv6-riscv/user/zombie.asm	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/zombie.asm	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/zombie.asm	1970-01-01 05:30:00.000000000 +0530
 @@ -1,1471 +0,0 @@
 -
 -user/_zombie:     file format elf64-littleriscv
@@ -55089,15 +55776,15 @@ diff -ruN xv6-riscv/user/zombie.asm xv6-riscv_modified/user/zombie.asm
 - 880:	6aa2                	ld	s5,8(sp)
 - 882:	6b02                	ld	s6,0(sp)
 - 884:	b7f5                	j	870 <malloc+0xe2>
-diff -ruN xv6-riscv/user/zombie.d xv6-riscv_modified/user/zombie.d
+diff -ruN xv6-riscv/user/zombie.d xv6-riscv_Modified/user/zombie.d
 --- xv6-riscv/user/zombie.d	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/zombie.d	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/zombie.d	1970-01-01 05:30:00.000000000 +0530
 @@ -1 +0,0 @@
 -user/zombie.o: user/zombie.c kernel/types.h kernel/stat.h user/user.h
-Binary files xv6-riscv/user/zombie.o and xv6-riscv_modified/user/zombie.o differ
-diff -ruN xv6-riscv/user/zombie.sym xv6-riscv_modified/user/zombie.sym
+Binary files xv6-riscv/user/zombie.o and xv6-riscv_Modified/user/zombie.o differ
+diff -ruN xv6-riscv/user/zombie.sym xv6-riscv_Modified/user/zombie.sym
 --- xv6-riscv/user/zombie.sym	2025-09-12 05:01:37.000000000 +0530
-+++ xv6-riscv_modified/user/zombie.sym	1970-01-01 05:30:00.000000000 +0530
++++ xv6-riscv_Modified/user/zombie.sym	1970-01-01 05:30:00.000000000 +0530
 @@ -1,65 +0,0 @@
 -0000000000000000 .text
 -0000000000000888 .rodata

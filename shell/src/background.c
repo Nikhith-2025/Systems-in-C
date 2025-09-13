@@ -30,8 +30,9 @@ typedef struct
 Job jobs[MAX_JOBS];
 int job_count = 0;
 pid_t foreground_pid = -1;  
-int next_job_num = 1;     
+int next_job_num = 1;      
 
+// Forward declarations
 int find_job_by_pid(pid_t pid);
 int find_job_by_number(int job_num);
 void remove_job(int idx);
@@ -45,11 +46,13 @@ int add_job(pid_t pid, char *args[], JobState state)
     jobs[job_count].state = state;
     jobs[job_count].job_number = next_job_num++;
     
+ 
     jobs[job_count].command = strdup(args[0] ? args[0] : "(unknown)");
     if (!jobs[job_count].command) {
         perror("malloc failed");
         return -1;
     }
+    
     size_t len = 0;
     for (int i = 0; args[i]; i++) {
         len += strlen(args[i]) + 1;
@@ -70,6 +73,7 @@ int add_job(pid_t pid, char *args[], JobState state)
     job_count++;
     return job_num;
 }
+
 void check_background_jobs()
 {
     int status;
@@ -94,6 +98,7 @@ void check_background_jobs()
         }
     }
 }
+
 int find_job_by_pid(pid_t pid)
 {
     for (int i = 0; i < job_count; i++) {
@@ -176,8 +181,9 @@ void execute_builtin(char *args[])
         while (args[argc]) argc++;
         char* exec_cmd = logging_command(argc, args);
         if (exec_cmd != NULL) {
+            // For log execute, we need to execute the returned command
             if (argc == 3 && strcmp(args[1], "execute") == 0) {
-                
+                // Use a static flag to prevent infinite recursion
                 static int executing_log_command = 0;
                 if (executing_log_command) {
                     printf("Error: recursive log execute detected\n");
@@ -187,6 +193,7 @@ void execute_builtin(char *args[])
                 
                 executing_log_command = 1;
                 
+                // Parse the command to execute
                 char *cmd_args[64];
                 int cmd_argc = 0;
                 char *exec_cmd_copy = strdup(exec_cmd);
@@ -200,55 +207,16 @@ void execute_builtin(char *args[])
                     cmd_args[cmd_argc] = NULL;
                     
                     if (cmd_argc > 0) {
-                 
-                        if (strcmp(cmd_args[0], "echo") == 0) {
-                    
-                            for (int i = 1; i < cmd_argc; i++) {
-                                printf("%s", cmd_args[i]);
-                                if (i < cmd_argc - 1) printf(" ");
-                            }
-                            printf("\n");
-                        } else if (strcmp(cmd_args[0], "cat") == 0 && cmd_argc == 2) {
-                           
-                            FILE *file = fopen(cmd_args[1], "r");
-                            if (file) {
-                                int c;
-                                while ((c = fgetc(file)) != EOF) {
-                                    putchar(c);
-                                }
-                                fclose(file);
-                            } else {
-                                printf("cat: %s: No such file or directory\n", cmd_args[1]);
-                            }
-                        } else if (strcmp(cmd_args[0], "activities") == 0) {
-                            
-                            extern void activities();
-                            activities();
-                        } else if (strcmp(cmd_args[0], "ping") == 0) {
-                            
-                            if (cmd_argc == 3) {
-                                extern void ping_process(char*, char*);
-                                ping_process(cmd_args[1], cmd_args[2]);
-                            } else {
-                                printf("Usage: ping <pid> <signal_number>\n");
-                            }
-                        } else if (strcmp(cmd_args[0], "fg") == 0) {
-                          
-                            extern void fg_command(char**);
-                            fg_command(cmd_args);
-                        } else if (strcmp(cmd_args[0], "bg") == 0) {
-                           
-                            extern void bg_command(char**);
-                            bg_command(cmd_args);
+                        if (is_builtin(cmd_args[0])) {
+                            execute_builtin(cmd_args);
                         } else {
                             pid_t pid = fork();
                             if (pid == 0) {
-                      
+                                // Child process
                                 execvp(cmd_args[0], cmd_args);
                                 fprintf(stderr, "Command not found!\n");
                                 exit(1);
                             } else if (pid > 0) {
-                               
                                 int status;
                                 waitpid(pid, &status, 0);
                             } else {
@@ -272,6 +240,7 @@ void execute_builtin(char *args[])
     }
     else if (strcmp(args[0], "ping") == 0)
     {
+        // Handle ping command
         int argc = 0;
         while (args[argc]) argc++;
         if (argc == 3) {
@@ -304,13 +273,16 @@ void execute(char *args[], int is_background)
         {
             pid_t pid = fork();
             if (pid == 0)
-            { 
+            { // Child
+                // Create new process group
                 setpgid(0, 0);
                 
+                // Redirect stdin to /dev/null for background builtins
                 int fd = open("/dev/null", O_RDONLY);
                 dup2(fd, STDIN_FILENO);
                 close(fd);
                 
+                // Reset signal handlers
                 signal(SIGINT, SIG_DFL);
                 signal(SIGTSTP, SIG_DFL);
                 
@@ -318,8 +290,8 @@ void execute(char *args[], int is_background)
                 exit(0);
             }
             else if (pid > 0)
-            { 
-                setpgid(pid, pid); 
+            { // Parent
+                setpgid(pid, pid); // Set child's process group
                 int job_num = add_job(pid, args, JOB_STATE_RUNNING);
                 if (job_num > 0) {
                     printf("[%d] %d\n", job_num, pid);
@@ -332,14 +304,14 @@ void execute(char *args[], int is_background)
         }
         else
         {
-            execute_builtin(args); 
+            execute_builtin(args);
         }
     }
     else
     {
         pid_t pid = fork();
         if (pid == 0)
-        { 
+        { // Child
             setpgid(0, 0);
             
             if (is_background)
@@ -365,8 +337,7 @@ void execute(char *args[], int is_background)
             }
         }
         else if (pid > 0)
-        { 
-            
+        { // Parent
             setpgid(pid, pid);
             
             if (is_background)
@@ -411,19 +382,6 @@ void execute(char *args[], int is_background)
     }
 }
 
-// static char* find_background_operator(char *input)
-// {
-//     if (!input) return NULL;
-    
-//     // If there's any && in the input, no background processing
-//     if (strstr(input, "&&") != NULL) {
-//         return NULL;
-//     }
-    
-//     // Find the first & operator
-//     return strchr(input, '&');
-// }
-
 void background(char *input)
 {
     char *commands[MAX_ARGS];
@@ -433,7 +391,7 @@ void background(char *input)
     char *saveptr;
     char *cmd = strtok_r(input, "&", &saveptr);
     while (cmd && cmd_count < MAX_ARGS - 1) {
-        while (*cmd == ' ' || *cmd == '\t') cmd++; 
+        while (*cmd == ' ' || *cmd == '\t') cmd++; // trim leading space
         if (*cmd != '\0')
             commands[cmd_count++] = cmd;
         cmd = strtok_r(NULL, "&", &saveptr);
@@ -453,12 +411,14 @@ void background(char *input)
 
         if (!args[0]) continue;
 
+        // Since we're in the background() function, this command should be backgrounded
+        // unless it's the last command and there were multiple commands separated by &
         int is_background = 1;
         execute(args, is_background);
     }
 }
 
-// fg command bring job to foreground
+// fg command: bring job to foreground
 void fg_command(char *args[])
 {
     int job_idx = -1;
@@ -513,6 +473,7 @@ void fg_command(char *args[])
         }
     }
 }
+
 void bg_command(char *args[])
 {
     int job_idx = -1;
@@ -545,7 +506,6 @@ void bg_command(char *args[])
     printf("[%d] %s &\n", job->job_number, job->command);
 }
 
-// Kill all background jobs for ctrl+D
 void kill_all_jobs()
 {
     for (int i = 0; i < job_count; i++) {
@@ -553,7 +513,7 @@ void kill_all_jobs()
     }
 }
 
-
+// Remove background operator from command string
 char* remove_background_operator(const char *input)
 {
     if (!input) return NULL;
@@ -561,7 +521,7 @@ char* remove_background_operator(const char *input)
     char *result = strdup(input);
     if (!result) return NULL;
     
-    // Find only & (not &&)
+    // Find standalone & (not &&)
     char *amp = strchr(result, '&');
     while (amp) {
         if (amp > result && *(amp - 1) == '&') {
@@ -574,9 +534,9 @@ char* remove_background_operator(const char *input)
             amp = strchr(amp + 2, '&');
             continue;
         }
-    
+        // Found standalone &, remove it and everything after
         *amp = '\0';
-       
+        // Trim trailing whitespace
         while (amp > result && (*(amp-1) == ' ' || *(amp-1) == '\t')) {
             *(--amp) = '\0';
         }
@@ -586,12 +546,13 @@ char* remove_background_operator(const char *input)
     return result;
 }
 
-
+// Process command with job control integration
 void process_command_with_jobs(const char *input, ParsedCommand *cmd, char *args[], int argc,
                               char *in_file, char *out_file, int append, int pipe_count)
 {
-    (void)in_file; (void)out_file; (void)append; 
+    (void)in_file; (void)out_file; (void)append; // Suppress unused parameter warnings
     
+    // For now, just execute the command normally
     if (pipe_count > 0) {
         char *input_copy = strdup(input ? input : "");
         execute_pipeline(cmd, input_copy, pipe_count);

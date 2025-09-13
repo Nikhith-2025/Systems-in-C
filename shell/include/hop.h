@@ -9,5 +9,6 @@ extern char prev_directory[1024];
 
 void hop(char *input);
 void hop_directory(const char *inp);
+int resolve_directory_path(const char *input_path, char *resolved_path, size_t path_size);
 
 #endif

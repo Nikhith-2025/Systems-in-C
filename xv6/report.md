@@ -1,210 +1,195 @@
 # xv6 Scheduler Implementation Report
 
-## Part A - Basic System Call: getreadcount
+## Part A – System Call: `getreadcount`
 
-### A.1: System Call Implementation
+### A.1: System Call Design and Implementation
 
-Implemented `sys_getreadcount()` system call that tracks and returns the total number of bytes read by the `read()` system call across all processes since boot.
+A new system call, `getreadcount()`, was implemented to track and return the cumulative number of bytes read by the `read()` system call across **all processes** since system boot.
+
+**Implementation Highlights:**
+
+* Introduced a global kernel variable `uint64 read_byte_count` to store the total bytes read.
+* Modified the existing `sys_read()` implementation to increment this counter by the number of bytes actually read on each successful read operation.
+* Implemented overflow handling implicitly by allowing natural wrap-around using unsigned integer arithmetic.
+* Implemented the `sys_getreadcount()` system call to return the current value of this counter to user programs.
+* Added the appropriate system call number, prototypes, and declarations in the system call tables and header files.
+
+This design ensures accurate system-wide tracking of data read operations without impacting the correctness or performance of the `read()` syscall.
+
+### A.2: User-Level Verification Program
+
+A user-level program `readcount.c` was developed to validate the functionality of `getreadcount()`.
+
+**Program Workflow:**
+
+1. Calls `getreadcount()` and prints the initial counter value.
+2. Opens and reads 100 bytes from a file (e.g., `README`).
+3. Calls `getreadcount()` again and prints the updated value.
+4. Confirms that the counter increased by the number of bytes read.
+
+**Outcome:**
+The observed increase in the counter value verifies the correct behavior of the `getreadcount()` system call.
+
+---
+
+## Part B – Scheduler Implementations
+
+### B.1: Overview
+
+The default **Round Robin** scheduler in xv6 was extended to support two additional scheduling policies:
+
+* **First Come First Serve (FCFS)**
+* **Completely Fair Scheduler (CFS)**
+
+The active scheduler is selected at compile time using flags:
+
+* `make qemu SCHEDULER=FCFS` — for FCFS
+* `make qemu SCHEDULER=CFS` — for CFS
+* No flag — defaults to Round Robin
+
+For evaluation and correctness verification, the kernel was configured to run on **a single CPU**. Running on multiple CPUs can produce interleaved and inconsistent terminal output due to concurrent scheduling decisions.
+
+---
+
+### B.2: First Come First Serve (FCFS) Scheduler
+
+**Characteristics:**
+
+* Non-preemptive scheduling policy.
+* Processes are scheduled strictly based on their creation time.
+* A process runs until it terminates or blocks (no time slicing).
 
 **Implementation Details:**
-- Added a global counter variable to track total bytes read
-- Modified the `sys_read()` system call to increment this counter with the number of bytes actually read
-- Implemented overflow handling by allowing the counter to wrap around to 0 naturally (using unsigned integer overflow)
-- The system call returns the current value of the global read counter
 
-**Key Changes:**
-- Added global variable `uint64 read_byte_count` in kernel
-- Modified `sys_read()` to update counter after successful read operations
-- Implemented `sys_getreadcount()` to return current counter value
-- Added system call number and declaration in appropriate header files
+* Added `creation_time` to `struct proc` and initialized it in `allocproc()`.
+* Modified the `scheduler()` loop to scan all `RUNNABLE` processes and select the one with the earliest `creation_time`.
+* Implemented the logic under a preprocessor flag (`SCHED_FCFS`) for compile-time selection.
+* Added basic debug logs to track scheduling decisions.
 
-### A.2: User Program
+This implementation effectively mimics a batch processing scheduler but is prone to the convoy effect, where long-running jobs block short ones.
 
-Created `readcount.c` user program that demonstrates the functionality:
+---
 
-**Program Flow:**
-1. Calls `getreadcount()` and prints the initial value
-2. Opens and reads 100 bytes from a file (README)
-3. Calls `getreadcount()` again and prints the updated value
-4. Verifies that the counter increased by the expected amount
+### B.3: Completely Fair Scheduler (CFS)
 
-**Verification:**
-The program successfully shows the increase in read count after performing file read operations, confirming the system call works correctly.
+#### B.3.1: Priority and Weight Mechanism
 
-## Part B - Scheduler Implementations
+* Introduced a `nice` field in `struct proc`, ranging from **-20 (highest priority)** to **+19 (lowest priority)**. Default: 0.
+* Implemented a `calculate_weight_from_priority()` helper that maps `nice` values to weights using an integer approximation of the Linux weight model:
 
-### Background
+  * Base weight at nice = 0: 1024
+  * Positive nice → lower weight (less CPU share)
+  * Negative nice → higher weight (more CPU share)
 
-Modified xv6's default round-robin scheduler to support three different scheduling policies:
-1. Default Round Robin (original)
-2. First Come First Serve (FCFS)
-3. Completely Fair Scheduler (CFS)
+#### B.3.2: Virtual Runtime (vRuntime) Tracking
 
-The kernel uses compile-time flags to determine which scheduler to use:
-- `make qemu SCHEDULER=FCFS` for First Come First Serve
-- `make qemu SCHEDULER=CFS` for Completely Fair Scheduler
-- Default compilation uses Round Robin
+* Added `virtual_runtime` to each process to track its CPU usage in a weighted manner.
+* On every timer tick, a process’s `virtual_runtime` is incremented by:
 
-### B.1: First Come First Serve (FCFS) Implementation
+  delta = (1024 * PRECISION) / weight
 
-**Key Features:**
-- Non-preemptive scheduling policy
-- Processes are selected based on creation time (earliest first)
-- Once a process starts running, it continues until completion or blocking
 
-**Implementation Details:**
-- Added `creation_time` field to `struct proc` to store process creation time
-- Modified `allocproc()` to set creation time when process is allocated
-- Implemented FCFS scheduler logic in `scheduler()` function:
-  - Scans all RUNNABLE processes to find the one with earliest creation time
-  - Selects and runs that process non-preemptively
-  - Process runs until it voluntarily yields, blocks, or terminates
+#### B.3.3: Scheduling Logic
 
-**Code Changes:**
-- Extended process control block with timing information
-- Used preprocessor directives (`#if ACTIVE_SCHEDULER == SCHED_FCFS`) for conditional compilation
-- Added debug output to show scheduling decisions
+* At each scheduling decision, the scheduler scans all `RUNNABLE` processes and selects the one with the **lowest `virtual_runtime`**.
+* This ensures that processes that have run less recently are favored, achieving fairness.
+* All locking is handled carefully to avoid race conditions during selection.
 
-### B.2: Completely Fair Scheduler (CFS) Implementation
+#### B.3.4: Time Slice Allocation
 
-#### B.2.1: Priority Support
+* Implemented **dynamic time slicing** based on system load:
 
-**Nice Value Implementation:**
-- Added `nice` field to `struct proc` with range [-20, +19]
-- Default nice value: 0 (neutral priority)
-- Nice -20: Highest priority (weight = ~88761)
-- Nice +19: Lowest priority (weight = ~15)
+  * Target latency: 48 ticks
+  * `slice = target_latency / runnable_count`
+  * Minimum enforced slice: 3 ticks
+* Once a process consumes its allocated slice, it yields to allow other processes to run.
 
-**Weight Calculation:**
-- Implemented `calculate_weight_from_priority` function
-- Uses approximation: `weight = 1024 / (1.25 ^ nice)`
-- For positive nice: iteratively multiply by 4/5 ratio
-- For negative nice: iteratively multiply by 5/4 ratio
-- Base weight for nice=0: 1024
+**Preemption** occurs naturally as the time slice expires, ensuring fair CPU distribution across processes.
 
-#### B.2.2: Virtual Runtime Tracking
+---
 
-**vRuntime Implementation:**
-- Added `virtual_runtime` field to track virtual runtime per process
-- Initialized to 0 when process is created
-- Updated on every timer tick using `update_cfs_on_tick()`
-- vRuntime increment: `delta = (1024 * VRUNTIME_SCALE_FACTOR) / weight`
-- Higher weight (lower nice) → slower vruntime growth
-- Lower weight (higher nice) → faster vruntime growth
+### B.4: Debug Logging
 
-**Update Mechanism:**
-- vRuntime updated in timer interrupt handler
-- Uses precision scaling factor (1000) for better granularity
-- Debug output shows vruntime progression for monitoring
+The CFS scheduler includes detailed debug logs to trace scheduling behavior. Example:
 
-#### B.2.3: Scheduling Logic
-
-**Process Selection:**
-- Always schedules the RUNNABLE process with minimum vruntime
-- Maintains fairness by ensuring processes with less CPU time (lower vruntime) get priority
-- Scans all processes to find minimum vruntime candidate
-
-**Implementation:**
-- Two-pass algorithm: count runnable processes, then select minimum vruntime
-- Proper lock management during process selection
-- Updates process weight based on current nice value before scheduling
-
-#### B.2.4: Time Slice Calculation
-
-**Dynamic Time Slicing:**
-- Target latency: 48 ticks
-- Time slice calculation: `computed_slice = target_latency_ticks / total_runnable`
-- Minimum time slice: 3 ticks (enforced)
-- Adapts to system load automatically
-
-**Preemption:**
-- Tracks ticks used in current time slice (`consumed_ticks`)
-- Process yields when time slice is exhausted
-- Allows other processes with low vruntime to run
-
-### Logging and Debug Output
-
-**CFS Scheduler Logging:**
-Implemented comprehensive logging as requested:
-
-```
 [Scheduler Tick]
-PID: 3 | vRuntime: 200
-PID: 4 | vRuntime: 150
-PID: 5 | vRuntime: 180
---> Scheduling PID 4 (lowest vRuntime)
-```
+PID: 7  | vRuntime: 0
+PID: 8  | vRuntime: 0
+PID: 9  | vRuntime: 9000
+PID: 10 | vRuntime: 9000
+PID: 11 | vRuntime: 0
+PID: 12 | vRuntime: 0
+PID: 13 | vRuntime: 0
+--> Scheduling PID 7 (lowest vRuntime)
 
-**Log Information:**
-- Process ID (PID) of each runnable process
-- Current vRuntime value for each process
-- Clear indication of selected process (lowest vRuntime)
-- Verification that scheduler selects correct process
-- Shows vRuntime updates after each scheduling decision
+[Scheduler Tick]
+PID: 8  | vRuntime: 0
+PID: 9  | vRuntime: 9000
+PID: 10 | vRuntime: 9000
+PID: 11 | vRuntime: 0
+PID: 12 | vRuntime: 0
+PID: 13 | vRuntime: 0
+--> Scheduling PID 8 (lowest vRuntime)
 
-### Performance Comparison
+[Scheduler Tick]
+PID: 9  | vRuntime: 9000
+PID: 10 | vRuntime: 9000
+PID: 11 | vRuntime: 0
+PID: 12 | vRuntime: 0
 
-**Methodology:**
-- Configured system to run on single CPU for fair comparison
-- Used `schedulertest` command to measure scheduling metrics
-- Measured average waiting time and running time for processes
 
-**Scheduler Performance Results:**
+This log shows:
 
-| Scheduler | Avg Waiting Time | Avg Running Time | Fairness | Throughput |
-|-----------|------------------|------------------|----------|------------|
-| Round Robin | Moderate | Balanced | Good | Good |
-| FCFS | High variance | Depends on arrival | Poor (convoy effect) | Lower |
-| CFS | Low variance | Proportional to weight | Excellent | High |
+* All runnable processes with their current `vRuntime`
+* The chosen process with the lowest `vRuntime`
+
+This visibility was crucial for validating the correctness of the CFS scheduling logic.
+
+---
+
+## Part C – Scheduler Performance Evaluation
+
+**Test Setup:**
+
+* System configured to use a single CPU.
+* Used a custom `schedulertest` utility to measure average waiting time, running time, fairness, and throughput.
+
+**Results:**
+
+| Scheduler   | Avg Waiting Time | Avg Running Time       | Fairness             | Throughput |
+| ----------- | ---------------- | ---------------------- | -------------------- | ---------- |
+| Round Robin | Moderate         | Balanced               | Good                 | Good       |
+| FCFS        | High variance    | Depends on arrival     | Poor (convoy effect) | Lower      |
+| CFS         | Low variance     | Proportional to weight | Excellent            | High       |
 
 **Analysis:**
 
-1. **Round Robin (Default):**
-   - Provides reasonable fairness with fixed time quantum
-   - Simple implementation with predictable behavior
-   - Good for interactive systems
+* **Round Robin:** Simple and fair, good for interactive workloads.
+* **FCFS:** Suffers from poor responsiveness when long tasks block short ones.
+* **CFS:** Achieves high fairness and responsiveness; adapts to workload dynamically.
 
-2. **First Come First Serve (FCFS):**
-   - Suffers from convoy effect when long processes arrive first
-   - Non-preemptive nature can lead to poor responsiveness
-   - Simple but not optimal for most workloads
-   - Good for batch processing systems
+---
 
-3. **Completely Fair Scheduler (CFS):**
-   - Provides excellent fairness through vruntime mechanism
-   - Adapts time slices based on system load
-   - Weight-based prioritization allows fine-grained control
-   - Best overall performance for mixed workloads
-   - Slightly more complex but worth the benefits
+## Part D – Challenges and Solutions
 
-### Implementation Challenges and Solutions
+| Challenge                  | Description                                    | Solution                                                     |
+| -------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
+| Integer weight calculation | Floating-point is unavailable in kernel        | Used iterative integer multiplication with 4/5 or 5/4 ratios |
+| vRuntime precision         | Integer math caused loss of granularity        | Introduced scaling factor (1000) to preserve precision       |
+| Locking during scheduling  | Risk of deadlocks or races                     | Applied careful lock acquire/release patterns                |
+| Preemption tuning          | Balancing fairness vs. context-switch overhead | Implemented dynamic time slices with a minimum threshold     |
 
-1. **Integer Arithmetic for Weight Calculation:**
-   - Challenge: Avoiding floating-point arithmetic in kernel
-   - Solution: Used iterative integer multiplication with ratios (4/5, 5/4)
+---
 
-2. **vRuntime Precision:**
-   - Challenge: Maintaining precision with integer arithmetic
-   - Solution: Used scaling factor (CFS_VRUNTIME_PRECISION = 1000)
+## Conclusion
 
-3. **Lock Management:**
-   - Challenge: Proper synchronization during scheduler decisions
-   - Solution: Careful acquire/release of process locks with early release optimization
+This project successfully extended xv6 with:
 
-4. **Time Slice Preemption:**
-   - Challenge: Ensuring fair preemption without excessive context switches
-   - Solution: Dynamic time slice calculation with minimum threshold
+* A **new system call (`getreadcount`)** for tracking system-wide bytes read
+* A **First Come First Serve (FCFS)** non-preemptive scheduler
+* A **Completely Fair Scheduler (CFS)** with support for `nice` priorities, weight-based scheduling, dynamic time slicing, and vruntime tracking
 
-### Conclusion
+Among the three, **CFS demonstrated superior fairness, responsiveness, and adaptability** to varying workloads.
+The inclusion of detailed scheduler logs enabled effective testing and verification of correctness.
 
-Successfully implemented three different scheduling algorithms in xv6:
-
-- **System Call (getreadcount):** Provides accurate tracking of system-wide read operations
-- **FCFS Scheduler:** Simple non-preemptive scheduler suitable for batch systems
-- **CFS Scheduler:** Advanced fair scheduler with priority support and dynamic time slicing
-
-The CFS implementation demonstrates superior fairness and adaptability compared to traditional schedulers, making it suitable for modern multi-tasking environments. The logging system provides clear visibility into scheduler decisions, confirming correct implementation of the vruntime-based selection algorithm.
-
-All implementations use proper kernel programming practices including appropriate locking, error handling, and resource management.
-
-Also all the scheduler are told to run on 1 cpu because if multiple cpu are used at the same instant then all the process prints at the same time onto the terminal which leads to a unwanted output
+All implementations followed proper kernel programming practices, including safe locking, careful resource management, and compile-time configurability. Running on a single CPU ensured consistent, non-interleaved output during evaluation.
