@@ -101,7 +101,7 @@ static void reveal_with_args(char *ptr)
         ptr++;
     }
 
-    // No args → use cwd
+    // No args: use cwd
     if (!*ptr)
     {
         strncpy(target_dir, current_directory, MAX_DIR_LENGTH - 1);
